@@ -1,0 +1,9 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# maven downloaded libraries (dependencies)
+target/
