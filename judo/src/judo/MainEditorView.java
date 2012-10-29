@@ -25,7 +25,8 @@ public class MainEditorView extends JFrame implements Observer {
 	private static final long serialVersionUID = 1L;
 	private static ImageIcon fileIcon = new ImageIcon("resources/icons/markdownBtns/new.png");
 	
-	private ArrayList<EditableDocument> docs;
+	private EditableDocuments docs;
+	private ArrayList<JTextArea> textareas = new ArrayList<JTextArea>();
 	
 	/**
 	 * Main Editor View Constructor
@@ -92,6 +93,7 @@ public class MainEditorView extends JFrame implements Observer {
         
         /* default new file tab*/
         JTextArea ta1 = new JTextArea();
+        textareas.add(ta1);
         JScrollPane panelta1 = new JScrollPane(ta1);
         panelta1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         panelta1.setPreferredSize(new Dimension(800	, 600));
@@ -147,6 +149,17 @@ public class MainEditorView extends JFrame implements Observer {
 		//buttonPanel.add();
 		return buttonPanel;
 	}
+	
+	/* second contructor takes in a model*/
+	public MainEditorView( EditableDocuments docs){
+		this();
+		this.docs = docs;
+		//textareas.add(0, docs.getDocumentByIndex(0)); maybe my model is just a textarea?
+		
+		
+		
+	}
+	
 
 	private JPanel createMrkdwnBtns() {
 
