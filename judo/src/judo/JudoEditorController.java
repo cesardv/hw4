@@ -1,17 +1,148 @@
 package judo;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Observable;
+import java.util.Scanner;
+
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.text.BadLocationException;
 
 public class JudoEditorController {
 	
-	private EditableDocuments docModels;
+	private ArrayList<EditableDocument> documents; 
 	private MainEditorView guiView; 
 	
-	public JudoEditorController(EditableDocuments docs, MainEditorView view)
+	public JudoEditorController()
 	{
-		this.docModels = docs;
-		this.guiView = view; //perhaps this shoudl be an interface IMainEditorView to decouple view/GUI from controller further
+		this.documents = new ArrayList<EditableDocument>();
+		this.guiView = new MainEditorView(this.documents, this);
+		guiView.setVisible(true);
+		
+	}
+	
+	public void open() throws FileNotFoundException, BadLocationException
+	{
+		JFileChooser filechooser = new JFileChooser();
+		JTextArea txtArea = new JTextArea();
+		int status = filechooser.showOpenDialog(guiView.getContentPane());
+		
+		if(status == JFileChooser.APPROVE_OPTION)
+		{
+			Scanner fileScanner = null;
+			boolean noError = true;
+			
+			try
+			{
+				fileScanner = new Scanner(filechooser.getSelectedFile());
+			}
+			catch(FileNotFoundException e)
+			{
+				noError = false;
+				JOptionPane.showMessageDialog(guiView.getContentPane(), "File not found!");
+			}
+			
+			while(noError && fileScanner.hasNextLine())
+			{
+				 txtArea.append(fileScanner.nextLine() + "\n");
+			}
+			
+			guiView.addTextarea(txtArea); //perhaps here I should be modifying the "model" and thus causing the new textpane with
+		
+		}
+    }
+	
+	public void OnViewExitEditor()
+	{
+		this.guiView.CloseEditor();
+	}
+	
+	public void CreateNewDocument()
+	{
+		JTextArea ta = new JTextArea();
+		documents.add(new EditableDocument(ta, "", ""));
+		//guiView.getDocs().add(e)
+		JScrollPane scrollp = new JScrollPane(ta);
+		guiView.getTabbedPane().add("New", scrollp);
+	}
+	
+	public void saveDocument(EditableDocument d)
+	{
+		EditableDocument doc = this.guiView.getCurrentDocument();
+		if(doc.getFilename().equals(""))
+		{
+			
+			final JFileChooser chooser = new JFileChooser();
+			final String defaultFileName = "new.md";
+
+			// add listener to filter changes
+			chooser.addPropertyChangeListener(JFileChooser.DIRECTORY_CHANGED_PROPERTY,
+			 	new PropertyChangeListener() {
+					    public void propertyChange(PropertyChangeEvent evt) {
+
+					    chooser.setSelectedFile(new File(chooser.getCurrentDirectory().getAbsolutePath() + "\\" + defaultFileName));
+					    chooser.updateUI();
+
+					   }
+					});
+		}
+		
+		/*
+			JFileChooser filechooser = new JFileChooser();
+			int stat = filechooser.showOpenDialog(guiView.getContentPane());
+			if (stat == JFileChooser.APPROVE_OPTION)
+			{
+				File file = new File();			
+			}
+		}
+		
+		*/
+		
+//		ActionListener listener = new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent event) {
+//            	if (event.getSource() == openBtn)
+//            	{
+//            		JFileChooser filechooser = new JFileChooser();
+//            		JTextArea txtArea = new JTextArea();
+//            		int status = filechooser.showOpenDialog(guiView.getContentPane());
+//            		if(status == JFileChooser.APPROVE_OPTION){
+//            			Scanner fileScanner = null;
+//            			boolean noError = true;
+//            			
+//            			try{
+//            				fileScanner = new Scanner(filechooser.getSelectedFile());
+//            			} catch(FileNotFoundException e){
+//            				noError = false;
+//            				JOptionPane.showMessageDialog(getContentPane(), "File not found!");
+//            			}
+//            			
+//            			while(noError && fileScanner.hasNextLine()){
+//            				 txtArea.append(fileScanner.nextLine() + "\n");
+//            			}
+//            			textareas.add(txtArea); //perhaps here I should be modifying the "model" and thus causing the new textpane with
+//            		
+//            		}
+//            	}
+//            }
+//        };
+			/*
+			int returnVal = fc.showSaveDialog(FileChooserDemo.this);
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+                File file = fc.getSelectedFile();
+                //This is where a real application would save the file.
+                log.append("Saving: " + file.getName() + "." + newline);
+            } else {
+                log.append("Save command cancelled by user." + newline);
+            }
+            
+			 * */
 		
 	}
 
-}
+} //end of controller class

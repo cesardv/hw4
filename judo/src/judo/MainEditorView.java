@@ -15,6 +15,7 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.Scanner;
 import java.util.Collections;
+import com.petebevin.markdown.*;
 
 
 public class MainEditorView extends JFrame implements Observer {
@@ -24,10 +25,30 @@ public class MainEditorView extends JFrame implements Observer {
 	 */
 	private static final long serialVersionUID = 1L;
 	private static ImageIcon fileIcon = new ImageIcon("resources/icons/markdownBtns/new.png");
-	
-	private EditableDocuments docs;
+	private final JTabbedPane tabbedPane;
+	private ArrayList<EditableDocument> docs; //these are our models
+	private JudoEditorController controller;
 	private ArrayList<JTextArea> textareas = new ArrayList<JTextArea>();
+	private final MarkdownProcessor mp = new MarkdownProcessor();
+	private EditableDocument currentDocument;
 	
+	public JTabbedPane getTabbedPane()
+	{
+		return this.tabbedPane;
+	}
+	
+	/* MAINEDITORVIEW 
+	 * Second constructor takes in a model
+	 * *********************************** */
+	public MainEditorView( ArrayList<EditableDocument> docs, JudoEditorController controlr)
+	{
+		this();
+		this.setDocs(docs);
+		this.controller = controlr;
+		//textareas.add(0, docs.getDocumentByIndex(0)); maybe my model is just a text area?
+				
+	}
+		
 	/**
 	 * Main Editor View Constructor
 	 * */
@@ -48,62 +69,96 @@ public class MainEditorView extends JFrame implements Observer {
 		JMenuBar menuBar = new JMenuBar();
 		/* MENUBAR  */
         JMenu fileMenu = new JMenu("File");
+        /*
         JMenu editMenu = new JMenu("Edit");
         JMenu viewMenu = new JMenu("View");
         JMenu helpMenu = new JMenu("Help");
-                
+        */       
         
         
         /*    FILEMENU ITEMS  */
         JMenuItem newItem = new JMenuItem("New", 'N');
         fileMenu.add(newItem);
+        //add action listener for NEW
+        newItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent event) {
+                try {
+                    controller.CreateNewDocument();
+                    // JOptionPane.showMessageDialog(contentPane, "Save Complete!");
+                } catch (Exception e) {
+                    //JOptionPane.showMessageDialog(contentPane, "Save Error!");
+                }
+            }
+        });
         
         JMenuItem openItem = new JMenuItem("Open...", 'O');
         fileMenu.add(openItem);
+        openItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) 
+            {
+            	CallOpenFunction();
+            }
+        });
+
         
         fileMenu.addSeparator(); /*---------------------*/
         
         JMenuItem saveItem = new JMenuItem("Save", 'S');
         fileMenu.add(saveItem);
+        saveItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent event) {
+                try {
+                	CallSaveFunction();
+                    JOptionPane.showMessageDialog(contentPane, "Save Complete!");
+                } catch (Exception e) 
+                {
+                    JOptionPane.showMessageDialog(contentPane, "There was an Error saving!" + e.getMessage());
+                }
+            }
+        });
         
-        JMenuItem saveAsItem = new JMenuItem("Save As...");
-        fileMenu.add(saveAsItem);
+        
+//        JMenuItem saveAsItem = new JMenuItem("Save As...");
+//        fileMenu.add(saveAsItem);
         
         fileMenu.addSeparator(); /*---------------------*/
         
-        JMenuItem previewItem = new JMenuItem("Preview", 'V');
+        final JMenuItem previewItem = new JMenuItem("Preview", 'V');
         fileMenu.add(previewItem);
+        
     
-        JMenuItem printItem = new JMenuItem("Print", 'P');
-        fileMenu.add(printItem);
+//        JMenuItem printItem = new JMenuItem("Print", 'P');
+//        fileMenu.add(printItem);
         
         fileMenu.addSeparator(); /*---------------------*/
-        JMenuItem quitItem = new JMenuItem("Quit", 'Q');
+        final JMenuItem quitItem = new JMenuItem("Quit", 'Q');
         fileMenu.add(quitItem);
         
         
         
         /* Adding Menus to bar*/
         menuBar.add(fileMenu);
-        menuBar.add(editMenu);
-        menuBar.add(viewMenu);
-        menuBar.add(helpMenu);
+        //menuBar.add(editMenu);
+        //menuBar.add(viewMenu);
+        //menuBar.add(helpMenu);
         
         /*Buttons*/
         
         /* default new file tab*/
-        JTextArea ta1 = new JTextArea();
-        textareas.add(ta1);
-        JScrollPane panelta1 = new JScrollPane(ta1);
-        panelta1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        panelta1.setPreferredSize(new Dimension(800	, 600));
+//        final JTextArea ta1 = new JTextArea();
+//        textareas.add(ta1);
+//        final JScrollPane panelta1 = new JScrollPane(ta1);
+//        panelta1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+//        panelta1.setPreferredSize(new Dimension(800	, 600));
         
         
         /* CENTER tabbed pane*/
-        JTabbedPane tabbedPane = new JTabbedPane();
+        this.tabbedPane = new JTabbedPane();
+        tabbedPane.setPreferredSize(new Dimension(800, 600));
         
-        tabbedPane.addTab("new", fileIcon, panelta1, "new");
-        tabbedPane.setMnemonicAt(0, KeyEvent.VK_1);
+        //this.tabbedPane.addTab("new", fileIcon, panelta1);
+        //this.tabbedPane.setMnemonicAt(0, KeyEvent.VK_1);
         
         tabsPanel.add(tabbedPane);
         //tabsPanel.set
@@ -117,7 +172,18 @@ public class MainEditorView extends JFrame implements Observer {
         contentPane.add("North", topPanel);
         
         
-	}
+        /* actionListeners */
+        ActionListener listener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent event) {
+//            	if (event.getSource() == openBtn){
+//            		
+//            	}
+            }
+        };
+        
+        
+	} // end of default constructor
 
 	private JPanel createFileOpsPanel() {
 		
@@ -128,8 +194,23 @@ public class MainEditorView extends JFrame implements Observer {
 		JButton newBtn = new JButton(new ImageIcon("resources/icons/fileops/new.png"));
 		newBtn.setToolTipText("New File");
 		
-		JButton openBtn = new JButton(new ImageIcon("resources/icons/fileops/folder.png"));
+		final JButton openBtn = new JButton(new ImageIcon("resources/icons/fileops/folder.png"));
 		openBtn.setToolTipText("Open File");
+		openBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent event) {
+            	try
+            	{
+            		CallOpenFunction();
+                    //JOptionPane.showMessageDialog(this.contentPane,"Save Complete!");
+                }
+            	catch (Exception e)
+                {
+                    //JOptionPane.showMessageDialog("There was an Error saving!");
+            		e.printStackTrace();
+                } 
+            }
+        });
 		
 		JButton saveBtn = new JButton(new ImageIcon("resources/icons/fileops/save.png"));
 		saveBtn.setToolTipText("Save Current Doc");
@@ -148,19 +229,21 @@ public class MainEditorView extends JFrame implements Observer {
 		buttonPanel.add(closeBtn);
 		//buttonPanel.add();
 		return buttonPanel;
+	} // END OF CreateFileOpsPanel
+	
+	
+	/**
+	 * CallSaveFunction
+	 * */
+	public void CallSaveFunction()
+	{
+		
+		this.controller.saveDocument(this.getCurrentDocument());
 	}
 	
-	/* second contructor takes in a model*/
-	public MainEditorView( EditableDocuments docs){
-		this();
-		this.docs = docs;
-		//textareas.add(0, docs.getDocumentByIndex(0)); maybe my model is just a textarea?
-		
-		
-		
-	}
-	
-
+	/*
+	 * Create and wires up the button to their respective action listeners 
+	 * */
 	private JPanel createMrkdwnBtns() {
 
 		JPanel panel = new JPanel(new FlowLayout());
@@ -193,6 +276,18 @@ public class MainEditorView extends JFrame implements Observer {
 		JButton quoteBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/quoteblock.png"));
 		quoteBtn.setToolTipText("Insert Quote Block");
 		
+		final JButton toHtmlBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/html!.png"));
+		toHtmlBtn.setToolTipText("Convert To HTML!");
+		
+		//final MarkdownProcessor m = new MarkdownProcessor();
+		toHtmlBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent event) {
+            	
+            	ProcessPreview();
+            }          
+        });
+		
 		panel.add(boldBtn);
 		panel.add(italicBtn);
 		panel.add(h1Btn);
@@ -206,8 +301,42 @@ public class MainEditorView extends JFrame implements Observer {
 		panel.add(linkBtn);
 		panel.add(imageBtn);
 		panel.add(quoteBtn);
+		panel.add(toHtmlBtn);
 		
 		return panel;
+		
+	} //end of createMarkdownBtnns
+	
+	/*
+	 * Process the markdown text in the current text Area and show a preview of HTML in default browser
+	 * */
+	private void ProcessPreview() {
+		JTextArea ta = this.textareas.get(0);
+		String str = ta.getText();
+		String html = mp.markdown(str);
+		BufferedWriter outfile;
+		try
+        {
+            outfile = new BufferedWriter(new FileWriter("preview.html"));
+            outfile.write(html);
+
+            outfile.close();
+        }
+        catch (IOException e)
+        {
+            System.out.println("Something went bad saving your current input/settings");
+        }
+		
+		File file = new File("preview.html");
+		try 
+		{
+			Desktop.getDesktop().open(file); // opens the preview HTML file in a default browser
+		}
+		catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
@@ -216,20 +345,68 @@ public class MainEditorView extends JFrame implements Observer {
 		// TODO set this to controller
 		
 	}
+
+	public ArrayList<EditableDocument> getDocs() {
+		return docs;
+	}
+
+	public void setDocs(ArrayList<EditableDocument> docs) {
+		this.docs = docs;
+	}
 	
-		// this should go on a controller
-//	private static void loadFileToTextArea(File file, JTextArea textArea, Container errorContainer) {
-//        Scanner fileScanner = null;
-//        boolean noError = true;
-//        try {
-//            fileScanner = new Scanner(file);
-//        } catch (FileNotFoundException e) {
-//            noError = false;
-//            JOptionPane.showMessageDialog(errorContainer, "File not found!");
-//        }
-//        while (noError && fileScanner.hasNextLine()) {
-//            textArea.append(fileScanner.nextLine()+"\n");
-//        }
-//    }
+	public void setTextAreas(ArrayList<JTextArea> tas)
+	{
+		this.textareas = tas;
+	}
 	
-}
+	public void addTextarea(JTextArea jta){
+		this.textareas.add(jta);
+	}
+	
+	public void CloseEditor()
+	{
+		// this.
+	}
+
+	public EditableDocument getCurrentDocument() {
+		return currentDocument;
+	}
+
+	public void setCurrentDocument(EditableDocument currentDocument) {
+		this.currentDocument = currentDocument;
+	}
+	
+	public void CallOpenFunction()
+	{
+		
+		JFileChooser fileChooser = new JFileChooser();
+		JTextArea textArea = new JTextArea();
+        int status = fileChooser.showOpenDialog(this);
+        if (status == JFileChooser.APPROVE_OPTION)
+        {
+            File file = fileChooser.getSelectedFile();
+            Scanner fileScanner = null;
+            boolean noError = true;
+            try {
+                fileScanner = new Scanner(file);
+            } catch (FileNotFoundException e) {
+                noError = false;
+                JOptionPane.showMessageDialog(this, "File not found!");
+            }
+            String textfromfile = "";
+            while (noError && fileScanner.hasNextLine()) {
+            	textfromfile += fileScanner.nextLine()+"\n";
+            }
+            
+            textArea.append(textfromfile);
+            // add textArea to models:
+            this.docs.add(new EditableDocument(textArea, file.getName(), file.getPath()));
+            //add it to View tabs
+            JScrollPane jscrollp = new JScrollPane(textArea);
+            jscrollp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+            jscrollp.setPreferredSize(new Dimension(800	, 600));
+        	this.tabbedPane.add(file.getName(),jscrollp);
+        }
+	}
+	
+} // end of MainEditorView class
