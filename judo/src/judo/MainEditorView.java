@@ -4,9 +4,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.WindowEvent;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import java.io.*;
 import java.net.MalformedURLException;
@@ -56,7 +59,7 @@ public class MainEditorView extends JFrame implements Observer {
 	{
 		this.setSize(900, 800);
 		this.setTitle("Judo Editor");
-		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		final Container contentPane = this.getContentPane();
 		contentPane.setLayout(new BorderLayout(5, 3));
 		
@@ -126,7 +129,14 @@ public class MainEditorView extends JFrame implements Observer {
         
         final JMenuItem previewItem = new JMenuItem("Preview", 'V');
         fileMenu.add(previewItem);
-        
+        previewItem.addActionListener(new ActionListener(){
+        	
+        	@Override
+        	public void actionPerformed(ActionEvent arg0) {
+        		if(currentDocument != null)
+        		ProcessPreview();
+        	}
+        });
     
 //        JMenuItem printItem = new JMenuItem("Print", 'P');
 //        fileMenu.add(printItem);
@@ -134,6 +144,13 @@ public class MainEditorView extends JFrame implements Observer {
         fileMenu.addSeparator(); /*---------------------*/
         final JMenuItem quitItem = new JMenuItem("Quit", 'Q');
         fileMenu.add(quitItem);
+        quitItem.addActionListener(new ActionListener(){
+        	
+        	@Override
+        	public void actionPerformed(ActionEvent arg0) {
+        		CloseEditor();
+        	}
+        });
         
         
         
@@ -156,7 +173,26 @@ public class MainEditorView extends JFrame implements Observer {
         /* CENTER tabbed pane*/
         this.tabbedPane = new JTabbedPane();
         tabbedPane.setPreferredSize(new Dimension(800, 600));
-        
+        tabbedPane.addChangeListener(new ChangeListener(){
+
+			@Override
+			public void stateChanged(ChangeEvent arg0) {
+				if(arg0 != null){
+					JScrollPane jsp = (JScrollPane) tabbedPane.getSelectedComponent();
+					JTextArea ta = new JTextArea();
+					// todo: we need to change model...
+					/*(JTextArea)jsp.
+					for(EditableDocument doc : docs)
+					{
+						if(ta == doc.getTextarea())
+						{
+							currentDocument = doc;
+						}
+					} */
+				}				
+			}
+        	
+        });
         //this.tabbedPane.addTab("new", fileIcon, panelta1);
         //this.tabbedPane.setMnemonicAt(0, KeyEvent.VK_1);
         
@@ -246,39 +282,93 @@ public class MainEditorView extends JFrame implements Observer {
 	 * */
 	private JPanel createMrkdwnBtns() {
 
+		ActionListener ltnr;
 		JPanel panel = new JPanel(new FlowLayout());
 
-		JButton boldBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/bold.png"));
+		final JButton boldBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/bold.png"));
 		boldBtn.setToolTipText("Bold");
-		JButton italicBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/italic.png"));
+				
+		final JButton italicBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/italic.png"));
 		italicBtn.setToolTipText("Italics");
-		JButton h1Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h1.png"));
+		
+		final JButton h1Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h1.png"));
 		h1Btn.setToolTipText("<H1>");
-		JButton h2Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h2.png"));
+		
+		final JButton h2Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h2.png"));
 		h2Btn.setToolTipText("<H2>");
-		JButton h3Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h3.png"));
+		
+		final JButton h3Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h3.png"));
 		h3Btn.setToolTipText("<H3>");
-		JButton h4Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h4.png"));
+		
+		final JButton h4Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h4.png"));
 		h4Btn.setToolTipText("<H4>");
-		JButton h5Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h5.png"));
+		
+		final JButton h5Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h5.png"));
 		h5Btn.setToolTipText("<H5>");
-		JButton h6Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h6.png"));
+		
+		final JButton h6Btn = new JButton(new ImageIcon("resources/icons/markdownBtns/h6.png"));
 		h6Btn.setToolTipText("<H6>");
-		JButton bulletBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/bullet.png"));
+		
+		final JButton bulletBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/bullet.png"));
 		bulletBtn.setToolTipText("<ul> - bullet list");
-		JButton listBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/list.png"));
+		
+		final JButton listBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/list.png"));
 		listBtn.setToolTipText("<ol> - Numbered List");
-		JButton linkBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/link.png"));
+		final JButton linkBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/link.png"));
 		linkBtn.setToolTipText("Insert hyperlink");
-		JButton imageBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/image.png"));
+		final JButton imageBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/image.png"));
 		imageBtn.setToolTipText("Insert image");
 		
-		JButton quoteBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/quoteblock.png"));
+		final JButton quoteBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/quoteblock.png"));
 		quoteBtn.setToolTipText("Insert Quote Block");
 		
 		final JButton toHtmlBtn = new JButton(new ImageIcon("resources/icons/markdownBtns/html!.png"));
 		toHtmlBtn.setToolTipText("Convert To HTML!");
 		
+		//add actionListener for all other btns
+		ltnr = new ActionListener() {
+		            @Override
+		            public void actionPerformed(ActionEvent event)
+		            {
+		            	if (event.getSource() == boldBtn)
+		            		MakeBoldAtCurrentCaret();
+		            	else if (event.getSource() == italicBtn)
+		            		MakeItalicAtCurrentCaret();
+		            	else if (event.getSource() == h1Btn)
+		            		MakeH1AtCurrentCaret();
+		            	else if (event.getSource() == h2Btn)
+		            		MakeH2AtCurrentCaret();
+		            	else if (event.getSource() == h3Btn)
+		            		MakeH3AtCurrentCaret();
+		            	else if (event.getSource() == h4Btn)
+		            		MakeH4AtCurrentCaret();
+		            	else if (event.getSource() == h5Btn)
+		            		MakeH5AtCurrentCaret();
+		            	else if (event.getSource() == h6Btn)
+		            		MakeH6AtCurrentCaret();
+		            	else if (event.getSource() == bulletBtn)
+		                	MakeBulletAtCurrentCaret();
+		                else if (event.getSource() == listBtn)
+		                	MakeOListAtCurrentCaret();
+		                else if (event.getSource() == imageBtn)
+		                	MakeImageAtCurrentCaret();
+		                else if (event.getSource() == linkBtn)
+		                	MakeLinkAtCurrentCaret();
+		            	           
+		            }          
+		        };
+		        boldBtn.addActionListener(ltnr);
+				italicBtn.addActionListener(ltnr);
+				h1Btn.addActionListener(ltnr);
+				h2Btn.addActionListener(ltnr);
+				h3Btn.addActionListener(ltnr);
+				h4Btn.addActionListener(ltnr);
+				h5Btn.addActionListener(ltnr);
+				h6Btn.addActionListener(ltnr);
+				bulletBtn.addActionListener(ltnr);
+				listBtn.addActionListener(ltnr);
+				linkBtn.addActionListener(ltnr);
+				
 		//final MarkdownProcessor m = new MarkdownProcessor();
 		toHtmlBtn.addActionListener(new ActionListener() {
             @Override
@@ -287,6 +377,7 @@ public class MainEditorView extends JFrame implements Observer {
             	ProcessPreview();
             }          
         });
+	
 		
 		panel.add(boldBtn);
 		panel.add(italicBtn);
@@ -307,6 +398,66 @@ public class MainEditorView extends JFrame implements Observer {
 		
 	} //end of createMarkdownBtnns
 	
+	protected void MakeLinkAtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeImageAtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeOListAtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeBulletAtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeH6AtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeH5AtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeH4AtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeH3AtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeH2AtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeH1AtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeItalicAtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void MakeBoldAtCurrentCaret() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	/*
 	 * Process the markdown text in the current text Area and show a preview of HTML in default browser
 	 * */
@@ -365,7 +516,11 @@ public class MainEditorView extends JFrame implements Observer {
 	
 	public void CloseEditor()
 	{
-		// this.
+		if(JOptionPane.showConfirmDialog(this, "Are you sure you want to exit?") == 0)//this,"Are you sure you want to exit (unsaved data will be lost)" );
+		{
+			WindowEvent wev = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+			Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(wev);
+        }
 	}
 
 	public EditableDocument getCurrentDocument() {

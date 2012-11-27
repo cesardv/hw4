@@ -7,7 +7,7 @@ import javax.swing.text.PlainDocument;
 
 public class EditableDocument  extends Observable {
 
-	JTextArea textarea;
+	private JTextArea textarea;
 	private boolean isunsaved;
 	private String filepath;
 	private String filename;
@@ -21,7 +21,7 @@ public class EditableDocument  extends Observable {
 	
 	public EditableDocument(JTextArea jta, String filename, String filepath)
 	{
-		this.textarea = jta;
+		this.setTextarea(jta);
 		this.filename = filename;
 		this.filepath = filepath;
 	}
@@ -65,6 +65,14 @@ public class EditableDocument  extends Observable {
 
 	public void setFilename(String filename) {
 		this.filename = filename;
+	}
+
+	public JTextArea getTextarea() {
+		return textarea;
+	}
+
+	public void setTextarea(JTextArea textarea) {
+		this.textarea = textarea;
 	}
 	
 	
