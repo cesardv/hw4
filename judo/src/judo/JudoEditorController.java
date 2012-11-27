@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
+import javax.swing.text.PlainDocument;
 
 public class JudoEditorController {
 	
@@ -26,36 +28,36 @@ public class JudoEditorController {
 		
 	}
 	
-	public void open() throws FileNotFoundException, BadLocationException
-	{
-		JFileChooser filechooser = new JFileChooser();
-		JTextArea txtArea = new JTextArea();
-		int status = filechooser.showOpenDialog(guiView.getContentPane());
-		
-		if(status == JFileChooser.APPROVE_OPTION)
-		{
-			Scanner fileScanner = null;
-			boolean noError = true;
-			
-			try
-			{
-				fileScanner = new Scanner(filechooser.getSelectedFile());
-			}
-			catch(FileNotFoundException e)
-			{
-				noError = false;
-				JOptionPane.showMessageDialog(guiView.getContentPane(), "File not found!");
-			}
-			
-			while(noError && fileScanner.hasNextLine())
-			{
-				 txtArea.append(fileScanner.nextLine() + "\n");
-			}
-			
-			guiView.addTextarea(txtArea); //perhaps here I should be modifying the "model" and thus causing the new textpane with
-		
-		}
-    }
+//	public void open() throws FileNotFoundException, BadLocationException
+//	{
+//		JFileChooser filechooser = new JFileChooser();
+//		JTextArea txtArea = new JTextArea();
+//		int status = filechooser.showOpenDialog(guiView.getContentPane());
+//		
+//		if(status == JFileChooser.APPROVE_OPTION)
+//		{
+//			Scanner fileScanner = null;
+//			boolean noError = true;
+//			
+//			try
+//			{
+//				fileScanner = new Scanner(filechooser.getSelectedFile());
+//			}
+//			catch(FileNotFoundException e)
+//			{
+//				noError = false;
+//				JOptionPane.showMessageDialog(guiView.getContentPane(), "File not found!");
+//			}
+//			
+//			while(noError && fileScanner.hasNextLine())
+//			{
+//				 txtArea.append(fileScanner.nextLine() + "\n");
+//			}
+//			
+//			guiView.addTextarea(txtArea); //perhaps here I should be modifying the "model" and thus causing the new textpane with
+//		
+//		}
+//    }
 	
 	public void OnViewExitEditor()
 	{
@@ -64,17 +66,18 @@ public class JudoEditorController {
 	
 	public void CreateNewDocument()
 	{
-		JTextArea ta = new JTextArea();
-		documents.add(new EditableDocument(ta, "", ""));
-		//guiView.getDocs().add(e)
-		JScrollPane scrollp = new JScrollPane(ta);
-		guiView.getTabbedPane().add("New", scrollp);
+		EditableDocument newDoc = new EditableDocument(new JScrollPane(), new JTextArea(), new PlainDocument(), "");
+		documents.add(newDoc);
+		
+		guiView.getTabbedPane().add("New", newDoc.getScrollpane());
+		guiView.getTabbedPane().setSelectedComponent(newDoc.getScrollpane());
+		guiView.setCurrentDocument(newDoc);
 	}
 	
 	public void saveDocument(EditableDocument d)
 	{
 		EditableDocument doc = this.guiView.getCurrentDocument();
-		if(doc.getFilename().equals(""))
+		if(doc.getFilepath().equals(""))
 		{
 			
 			final JFileChooser chooser = new JFileChooser();

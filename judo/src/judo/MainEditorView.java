@@ -10,6 +10,11 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
+import javax.swing.text.PlainDocument;
 
 import java.io.*;
 import java.net.MalformedURLException;
@@ -28,10 +33,10 @@ public class MainEditorView extends JFrame implements Observer {
 	 */
 	private static final long serialVersionUID = 1L;
 	private static ImageIcon fileIcon = new ImageIcon("resources/icons/markdownBtns/new.png");
-	private final JTabbedPane tabbedPane;
+	private JTabbedPane tabbedPane;
 	private ArrayList<EditableDocument> docs; //these are our models
 	private JudoEditorController controller;
-	private ArrayList<JTextArea> textareas = new ArrayList<JTextArea>();
+	//private ArrayList<JTextArea> textareas = new ArrayList<JTextArea>();
 	private final MarkdownProcessor mp = new MarkdownProcessor();
 	private EditableDocument currentDocument;
 	
@@ -171,24 +176,21 @@ public class MainEditorView extends JFrame implements Observer {
         
         
         /* CENTER tabbed pane*/
-        this.tabbedPane = new JTabbedPane();
+        tabbedPane = new JTabbedPane();
         tabbedPane.setPreferredSize(new Dimension(800, 600));
         tabbedPane.addChangeListener(new ChangeListener(){
 
 			@Override
 			public void stateChanged(ChangeEvent arg0) {
-				if(arg0 != null){
-					JScrollPane jsp = (JScrollPane) tabbedPane.getSelectedComponent();
-					JTextArea ta = new JTextArea();
-					// todo: we need to change model...
-					/*(JTextArea)jsp.
+				if(arg0 != null)
+				{
+					int selIndex = getTabbedPane().getSelectedIndex();
+					JScrollPane scp = (JScrollPane)tabbedPane.getComponentAt(selIndex);
 					for(EditableDocument doc : docs)
 					{
-						if(ta == doc.getTextarea())
-						{
-							currentDocument = doc;
-						}
-					} */
+						if(doc.getScrollpane() == scp)
+							setCurrentDocument(doc);
+					}
 				}				
 			}
         	
@@ -227,41 +229,55 @@ public class MainEditorView extends JFrame implements Observer {
 		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
 
 		
-		JButton newBtn = new JButton(new ImageIcon("resources/icons/fileops/new.png"));
+		final JButton newBtn = new JButton(new ImageIcon("resources/icons/fileops/new.png"));
 		newBtn.setToolTipText("New File");
 		
 		final JButton openBtn = new JButton(new ImageIcon("resources/icons/fileops/folder.png"));
 		openBtn.setToolTipText("Open File");
-		openBtn.addActionListener(new ActionListener() {
+		
+		final JButton saveBtn = new JButton(new ImageIcon("resources/icons/fileops/save.png"));
+		saveBtn.setToolTipText("Save Current Doc");
+		
+//		JButton savecopyBtn = new JButton(new ImageIcon("resources/icons/fileops/savecopy.png"));
+//		saveBtn.setToolTipText("Save Current Doc");
+		
+		final JButton closeBtn = new JButton(new ImageIcon("resources/icons/fileops/close.png"));
+		closeBtn.setToolTipText("Close Current File");
+		
+		ActionListener fileActionsListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent event) {
-            	try
-            	{
-            		CallOpenFunction();
-                    //JOptionPane.showMessageDialog(this.contentPane,"Save Complete!");
-                }
-            	catch (Exception e)
-                {
-                    //JOptionPane.showMessageDialog("There was an Error saving!");
-            		e.printStackTrace();
-                } 
+            	
+            		try
+            		{
+            			if (event.getSource() == openBtn){
+            				CallOpenFunction();
+            			}
+            			else if (event.getSource() == newBtn)
+            			{
+            				CallNewFunction();
+            			}
+	                }
+	            	catch (Exception e)
+	                {
+	                    //JOptionPane.showMessageDialog("There was an Error saving!");
+	            		e.printStackTrace();
+	                }
+            	
             }
-        });
-		
-		JButton saveBtn = new JButton(new ImageIcon("resources/icons/fileops/save.png"));
-		saveBtn.setToolTipText("Save Current Doc");
-		
-		JButton savecopyBtn = new JButton(new ImageIcon("resources/icons/fileops/savecopy.png"));
-		saveBtn.setToolTipText("Save Current Doc");
-		
-		JButton closeBtn = new JButton(new ImageIcon("resources/icons/fileops/close.png"));
-		closeBtn.setToolTipText("Close Current File");
+        };
+        // attach listeners to buttons
+		openBtn.addActionListener(fileActionsListener);
+		newBtn.addActionListener(fileActionsListener);
+		saveBtn.addActionListener(fileActionsListener);
+		closeBtn.addActionListener(fileActionsListener);
+		//addActionListener(fileActionsListener);
 		
 		
 		buttonPanel.add(newBtn);
 		buttonPanel.add(openBtn);
 		buttonPanel.add(saveBtn);
-		buttonPanel.add(savecopyBtn);
+		// buttonPanel.add(savecopyBtn);
 		buttonPanel.add(closeBtn);
 		//buttonPanel.add();
 		return buttonPanel;
@@ -275,6 +291,15 @@ public class MainEditorView extends JFrame implements Observer {
 	{
 		
 		this.controller.saveDocument(this.getCurrentDocument());
+	}
+	
+	/**
+	 * CallSaveFunction
+	 * */
+	public void CallNewFunction()
+	{
+		
+		this.controller.CreateNewDocument();
 	}
 	
 	/*
@@ -462,8 +487,14 @@ public class MainEditorView extends JFrame implements Observer {
 	 * Process the markdown text in the current text Area and show a preview of HTML in default browser
 	 * */
 	private void ProcessPreview() {
-		JTextArea ta = this.textareas.get(0);
-		String str = ta.getText();
+		EditableDocument currdoc = this.getCurrentDocument();
+		String str = "";
+		try {
+			str = currdoc.getDocument().getText(0, currdoc.getDocument().getLength());
+		} catch (/*BadLocationException*/ Exception e1) {
+			
+			JOptionPane.showMessageDialog(this,e1.getMessage());
+		}
 		String html = mp.markdown(str);
 		BufferedWriter outfile;
 		try
@@ -505,14 +536,6 @@ public class MainEditorView extends JFrame implements Observer {
 		this.docs = docs;
 	}
 	
-	public void setTextAreas(ArrayList<JTextArea> tas)
-	{
-		this.textareas = tas;
-	}
-	
-	public void addTextarea(JTextArea jta){
-		this.textareas.add(jta);
-	}
 	
 	public void CloseEditor()
 	{
@@ -553,15 +576,56 @@ public class MainEditorView extends JFrame implements Observer {
             	textfromfile += fileScanner.nextLine()+"\n";
             }
             
-            textArea.append(textfromfile);
-            // add textArea to models:
-            this.docs.add(new EditableDocument(textArea, file.getName(), file.getPath()));
+            Document pd = (Document)new PlainDocument();
+            try
+            {
+				pd.insertString(pd.getLength(), textfromfile, null);
+			}
+            catch (BadLocationException e1)
+            {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+            
+            pd.addDocumentListener(new DocumentListener(){
+
+				@Override
+				public void changedUpdate(DocumentEvent e) {
+					// TODO Auto-generated method stub
+					SetFileToUnsaved();
+					
+				}
+
+				@Override
+				public void insertUpdate(DocumentEvent e) {
+					SetFileToUnsaved();
+					
+				}
+
+				@Override
+				public void removeUpdate(DocumentEvent e) {
+					// TODO Auto-generated method stub
+					SetFileToUnsaved();
+					
+				}
+            	
+            });
+            
+            // add new scroll pane, textArea, and doc to model:
+            EditableDocument edoc = new EditableDocument(new JScrollPane(), new JTextArea(), pd, file.getPath());
+            this.docs.add(edoc);
             //add it to View tabs
-            JScrollPane jscrollp = new JScrollPane(textArea);
-            jscrollp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-            jscrollp.setPreferredSize(new Dimension(800	, 600));
-        	this.tabbedPane.add(file.getName(),jscrollp);
+            
+            edoc.getScrollpane().setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+            edoc.getScrollpane().setPreferredSize(new Dimension(800	, 600));
+        	this.tabbedPane.add(edoc.getFilepath(),edoc.getScrollpane());
         }
+	}
+
+	protected void SetFileToUnsaved() {
+		// TODO Auto-generated method stub
+		this.getCurrentDocument().setIsunsaved(true);
+		
 	}
 	
 } // end of MainEditorView class
