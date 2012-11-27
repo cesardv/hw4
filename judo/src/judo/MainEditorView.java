@@ -393,6 +393,7 @@ public class MainEditorView extends JFrame implements Observer {
 				bulletBtn.addActionListener(ltnr);
 				listBtn.addActionListener(ltnr);
 				linkBtn.addActionListener(ltnr);
+				imageBtn.addActionListener(ltnr);
 				
 		//final MarkdownProcessor m = new MarkdownProcessor();
 		toHtmlBtn.addActionListener(new ActionListener() {
@@ -425,62 +426,136 @@ public class MainEditorView extends JFrame implements Observer {
 	
 	protected void MakeLinkAtCurrentCaret() {
 		// TODO Auto-generated method stub
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "[text](url)", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
 	protected void MakeImageAtCurrentCaret() {
 		// TODO Auto-generated method stub
-		
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "![alttext](imgurl)", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	protected void MakeOListAtCurrentCaret() {
 		// TODO Auto-generated method stub
-		
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "- ", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	protected void MakeBulletAtCurrentCaret() {
 		// TODO Auto-generated method stub
-		
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "* ", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	protected void MakeH6AtCurrentCaret() {
 		// TODO Auto-generated method stub
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "###### ", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
 	protected void MakeH5AtCurrentCaret() {
 		// TODO Auto-generated method stub
-		
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "##### ", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	protected void MakeH4AtCurrentCaret() {
 		// TODO Auto-generated method stub
-		
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "#### ", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	protected void MakeH3AtCurrentCaret() {
 		// TODO Auto-generated method stub
-		
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "### ", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	protected void MakeH2AtCurrentCaret() {
 		// TODO Auto-generated method stub
-		
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "## ", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	protected void MakeH1AtCurrentCaret() {
 		// TODO Auto-generated method stub
-		
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "# ", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	protected void MakeItalicAtCurrentCaret() {
 		// TODO Auto-generated method stub
-		
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "_", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	protected void MakeBoldAtCurrentCaret() {
 		// TODO Auto-generated method stub
-		
+		try {
+			int caret = getCurrentDocument().getTextarea().getCaretPosition();
+			getCurrentDocument().getDocument().insertString(caret, "**", null);
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/*
