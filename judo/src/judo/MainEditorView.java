@@ -257,6 +257,14 @@ public class MainEditorView extends JFrame implements Observer {
             			{
             				CallNewFunction();
             			}
+            			else if (event.getSource() == closeBtn)
+            			{
+            				closeCurrentDoc();
+            			}
+            			else if (event.getSource() == saveBtn)
+            			{
+            				CallSaveFunction();
+            			}
 	                }
 	            	catch (Exception e)
 	                {
@@ -289,7 +297,11 @@ public class MainEditorView extends JFrame implements Observer {
 	 * */
 	public void CallSaveFunction()
 	{
-		
+		if (this.getCurrentDocument().getFilepath().equals("") || this.getCurrentDocument().getFilepath().equals(""))
+		{
+			String fp = JOptionPane.showInputDialog("Please specify where you want to save this file.");
+			this.getCurrentDocument().setFilepath(fp);
+		}
 		this.controller.saveDocument(this.getCurrentDocument());
 	}
 	
@@ -701,6 +713,27 @@ public class MainEditorView extends JFrame implements Observer {
 		// TODO Auto-generated method stub
 		this.getCurrentDocument().setIsunsaved(true);
 		
+	}
+
+	protected void closeCurrentDoc()
+	{
+		if(getCurrentDocument().isIsunsaved())
+		{
+			if(JOptionPane.showConfirmDialog(this.getContentPane(), getCurrentDocument().getFilepath() + " has unsaved changes. Are you sure you want to close it?") == 0){
+				CloseCurrentTab();
+				return;
+			}
+		}
+		else { 
+			CloseCurrentTab();
+		}
+	}
+
+	private void CloseCurrentTab() {
+		// TODO Auto-generated method stub
+		//omponent panetoclose =	tabbedPane.get
+		int sel = tabbedPane.getSelectedIndex();
+		tabbedPane.remove(sel);
 	}
 	
 } // end of MainEditorView class

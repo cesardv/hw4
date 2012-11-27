@@ -94,6 +94,29 @@ public class JudoEditorController {
 					   }
 					});
 		}
+		else
+		{
+			File file = new File(d.getFilepath());
+	        FileWriter fileWriter = null;
+			try {
+				fileWriter = new FileWriter(file);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+	        int textLength = d.getDocument().getLength();
+	        try {
+				fileWriter.write(d.getDocument().getText(0, textLength));
+				 fileWriter.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (BadLocationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	       
+		}
 		
 		/*
 			JFileChooser filechooser = new JFileChooser();
