@@ -2,39 +2,43 @@ package judo;
 
 import java.util.Observable;
 
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.text.Document;
 import javax.swing.text.PlainDocument;
 
 public class EditableDocument  extends Observable {
 
 	private JTextArea textarea;
+	private JScrollPane scrollpane;
 	private boolean isunsaved;
 	private String filepath;
-	private String filename;
-	private PlainDocument document; //we likely not gonna use this
+	private Document document; 
 	
 	public EditableDocument()
 	{
-		this.filename = "";
 		this.filepath = "";
 	}
 	
-	public EditableDocument(JTextArea jta, String filename, String filepath)
+	public EditableDocument(JScrollPane scp, JTextArea jta, Document doc, String filepath)
 	{
 		this.setTextarea(jta);
-		this.filename = filename;
+		this.scrollpane = scp;
 		this.filepath = filepath;
+		this.document = doc;
+		this.textarea.setDocument(doc);
+		this.scrollpane.setViewportView(this.textarea);
 	}
 
 	
 	/* Plain Document 
 	 *  is what the textpane as actually gets and modifies
 	 * */
-	public PlainDocument getDocument() {
+	public Document getDocument() {
 		return document;
 	}
 
-	public void setDocument(PlainDocument document) {
+	public void setDocument(Document document) {
 		this.document = document;
 	}
 
@@ -59,13 +63,13 @@ public class EditableDocument  extends Observable {
 		this.filepath = filepath;
 	}
 
-	public String getFilename() {
-		return filename;
-	}
-
-	public void setFilename(String filename) {
-		this.filename = filename;
-	}
+//	public String getFilename() {
+//		return filename;
+//	}
+//
+//	public void setFilename(String filename) {
+//		this.filename = filename;
+//	}
 
 	public JTextArea getTextarea() {
 		return textarea;
@@ -73,6 +77,22 @@ public class EditableDocument  extends Observable {
 
 	public void setTextarea(JTextArea textarea) {
 		this.textarea = textarea;
+	}
+
+	public boolean isIsunsaved() {
+		return isunsaved;
+	}
+
+	public void setIsunsaved(boolean isunsaved) {
+		this.isunsaved = isunsaved;
+	}
+
+	public JScrollPane getScrollpane() {
+		return scrollpane;
+	}
+
+	public void setScrollpane(JScrollPane scrollpane) {
+		this.scrollpane = scrollpane;
 	}
 	
 	
