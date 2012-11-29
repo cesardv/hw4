@@ -100,7 +100,8 @@ public class JudoEditorController {
 	        FileWriter fileWriter = null;
 			try {
 				fileWriter = new FileWriter(file);
-			} catch (IOException e1) {
+			} 
+			catch (IOException e1) {
 				e1.printStackTrace();
 			}
 	        int textLength = d.getDocument().getLength();

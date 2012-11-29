@@ -306,7 +306,9 @@ public class MainEditorView extends JFrame implements Observer {
 			tabbedPane.setTitleAt(index, this.getCurrentDocument().getFilepath());
 		
 		}
-		else {
+		else
+		{
+
 			String fp = JOptionPane.showInputDialog("Please specify where you want to save this file.");
 			this.getCurrentDocument().setFilepath(fp);
 		}
@@ -459,7 +461,6 @@ public class MainEditorView extends JFrame implements Observer {
 	}
 
 	protected void MakeLinkAtCurrentCaret() {
-		
 		try
 		{
 			int caret = getCurrentDocument().getTextarea().getCaretPosition();
