@@ -717,7 +717,7 @@ public class MainEditorView extends JFrame implements Observer {
 
 	protected void closeCurrentDoc()
 	{
-		if(getCurrentDocument().isIsunsaved())
+		if(getCurrentDocument() != null && getCurrentDocument().isIsunsaved())
 		{
 			if(JOptionPane.showConfirmDialog(this.getContentPane(), getCurrentDocument().getFilepath() + " has unsaved changes. Are you sure you want to close it?") == 0){
 				CloseCurrentTab();
@@ -733,6 +733,7 @@ public class MainEditorView extends JFrame implements Observer {
 		// TODO Auto-generated method stub
 		//omponent panetoclose =	tabbedPane.get
 		int sel = tabbedPane.getSelectedIndex();
+		if( sel != -1)
 		tabbedPane.remove(sel);
 	}
 	

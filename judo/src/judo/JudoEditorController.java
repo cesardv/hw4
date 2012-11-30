@@ -118,57 +118,6 @@ public class JudoEditorController {
 	       
 		}
 		
-		/*
-			JFileChooser filechooser = new JFileChooser();
-			int stat = filechooser.showOpenDialog(guiView.getContentPane());
-			if (stat == JFileChooser.APPROVE_OPTION)
-			{
-				File file = new File();			
-			}
-		}
-		
-		*/
-		
-//		ActionListener listener = new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent event) {
-//            	if (event.getSource() == openBtn)
-//            	{
-//            		JFileChooser filechooser = new JFileChooser();
-//            		JTextArea txtArea = new JTextArea();
-//            		int status = filechooser.showOpenDialog(guiView.getContentPane());
-//            		if(status == JFileChooser.APPROVE_OPTION){
-//            			Scanner fileScanner = null;
-//            			boolean noError = true;
-//            			
-//            			try{
-//            				fileScanner = new Scanner(filechooser.getSelectedFile());
-//            			} catch(FileNotFoundException e){
-//            				noError = false;
-//            				JOptionPane.showMessageDialog(getContentPane(), "File not found!");
-//            			}
-//            			
-//            			while(noError && fileScanner.hasNextLine()){
-//            				 txtArea.append(fileScanner.nextLine() + "\n");
-//            			}
-//            			textareas.add(txtArea); //perhaps here I should be modifying the "model" and thus causing the new textpane with
-//            		
-//            		}
-//            	}
-//            }
-//        };
-			/*
-			int returnVal = fc.showSaveDialog(FileChooserDemo.this);
-            if (returnVal == JFileChooser.APPROVE_OPTION) {
-                File file = fc.getSelectedFile();
-                //This is where a real application would save the file.
-                log.append("Saving: " + file.getName() + "." + newline);
-            } else {
-                log.append("Save command cancelled by user." + newline);
-            }
-            
-			 * */
-		
 	}
 
 } //end of controller class
