@@ -1,0 +1,9 @@
+[FILENAMES]
+Exe=      Backup\mshtml.dll
+SaveAs=   NewFiles\mshtml.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\vertigo\internet-web-browser-msie.ico, ICONGROUP, 2660,
+-addoverwrite Resources\res_named\mimetypes\text-html.ico, ICONGROUP, 2661,  
+-addoverwrite Resources\res_named\actions\go-home.ico,  ICONGROUP, 2665,  
+-addoverwrite Resources\res_named\mimetypes\text-html.ico, ICONGROUP, 2673,  

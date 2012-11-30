@@ -1,0 +1,23 @@
+[FILENAMES]
+Exe=      Backup\explorer.exe
+SaveAs=   NewFiles\explorer.exe
+
+[COMMANDS]
+
+-addoverwrite Resources\res_named\devices\computer.ico,  ICONGROUP, 100, 
+-addoverwrite Resources\res_named\apps\system-file-manager.ico,  ICONGROUP, 101, 
+-addoverwrite Resources\res_named\places\user-desktop.ico,  ICONGROUP, 103, 
+-addoverwrite Resources\res_unofficial\tangerine-icon-theme\apps\gnome-settings-ui-behavior.ico,  ICONGROUP, 107, 
+-addoverwrite Resources\res_named\status\user-trash-full.ico,  ICONGROUP, 108, 
+-addoverwrite Resources\res_named\status\dialog-information.ico,  ICONGROUP, 109, 
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 110, 
+-addoverwrite Resources\res_named\status\dialog-error.ico,  ICONGROUP, 111, 
+-addoverwrite Resources\res_named\places\folder.ico,  ICONGROUP, 252, 
+-addoverwrite Resources\res_named\apps\internet-web-browser.ico,  ICONGROUP, 253, 
+-addoverwrite Resources\res_named\apps\internet-mail.ico,  ICONGROUP, 254, 
+-addoverwrite Resources\res_unofficial\tangerine-icon-theme\apps\gnome-settings-ui-behavior.ico,  ICONGROUP, 257, 
+
+-addoverwrite Resources\res_tweaked\explorer.exe\143.bmp,  BITMAP, 143, 
+-addoverwrite Resources\res_tweaked\explorer.exe\176.bmp,  BITMAP, 176, 
+-addoverwrite Resources\res_tweaked\explorer.exe\7010+7011.bmp,  BITMAP, 7010, 
+-addoverwrite Resources\res_tweaked\explorer.exe\7010+7011.bmp,  BITMAP, 7011, 

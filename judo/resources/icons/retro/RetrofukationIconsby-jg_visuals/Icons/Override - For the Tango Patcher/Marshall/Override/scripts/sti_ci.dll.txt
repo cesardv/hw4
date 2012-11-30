@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=      Backup\sti_ci.dll
+SaveAs=   NewFiles\sti_ci.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\wizards\camera-photo_164x628.bmp,  BITMAP, 1001,
+-addoverwrite Resources\res_tweaked\wizards\camera-photo_132x252.bmp,  BITMAP, 1002,
+-addoverwrite Resources\res_tweaked\wizards\camera-photo_49x49.bmp,  BITMAP, 1010,

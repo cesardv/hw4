@@ -1,0 +1,13 @@
+[FILENAMES]
+Exe=      Backup\newdev.dll
+SaveAs=   NewFiles\newdev.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\media-flash.ico,  ICONGROUP, 200, 
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP,207,
+-addoverwrite Resources\res_named\status\dialog-information.ico,  ICONGROUP,208,
+
+-addoverwrite Resources\res_tweaked\wizards\media-flash_49x49.bmp,  BITMAP, 100,
+-addoverwrite Resources\res_tweaked\wizards\media-flash_164x628.bmp,  BITMAP, 101,
+
+-addoverwrite Resources\res_tweaked\anim\folder_folder.avi,  AVI, 301, 

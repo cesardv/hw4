@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=	"Backup\ieframe.dll.mui"
+SaveAs=	"NewFiles\ieframe.dll.mui"
+
+[COMMANDS]
+
+-addoverwrite Resources\res_tweaked\ieframe.dll\info_48.png, 23, "INFO_48.PNG", 

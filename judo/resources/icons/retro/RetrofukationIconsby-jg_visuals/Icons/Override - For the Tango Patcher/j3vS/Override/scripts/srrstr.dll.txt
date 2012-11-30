@@ -1,0 +1,11 @@
+[FILENAMES]
+Exe=      Backup\srrstr.dll
+SaveAs=   NewFiles\srrstr.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\preferences-system-session.ico,  ICONGROUP, 101, 
+-addoverwrite Resources\res_named\devices\drive-harddisk.ico,  ICONGROUP, 102, 
+
+
+-addoverwrite Resources\res_tweaked\srrstr.dll\111.bmp,  BITMAP, 111, 
+-addoverwrite Resources\res_tweaked\srrstr.dll\112.bmp,  BITMAP, 112, 

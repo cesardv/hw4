@@ -1,0 +1,9 @@
+[FILENAMES]
+Exe=      Backup\fldrclnr.dll
+SaveAs=   NewFiles\fldrclnr.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\status\dialog-information.ico,  ICONGROUP, 100,
+
+-addoverwrite Resources\res_tweaked\wizards\edit-clear_49x49.bmp,  BITMAP, 200,
+-addoverwrite Resources\res_tweaked\wizards\edit-clear_164x314.bmp,  BITMAP, 201,

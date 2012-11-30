@@ -1,0 +1,10 @@
+[FILENAMES]
+Exe=      Backup\sysdm.cpl
+SaveAs=   NewFiles\sysdm.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\computer.ico,  ICONGROUP, 1, 
+-addoverwrite Resources\res_named\places\user-home.ico,  ICONGROUP, 2,
+
+-addoverwrite Resources\res_tweaked\sysdm.cpl\1+2.bmp,  BITMAP, 1,
+-addoverwrite Resources\res_tweaked\sysdm.cpl\1+2.bmp,  BITMAP, 2,

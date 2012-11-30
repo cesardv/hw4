@@ -1,0 +1,12 @@
+[FILENAMES]
+Exe=      Backup\sysocmgr.exe
+SaveAs=   NewFiles\sysocmgr.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\system-installer.ico,  ICONGROUP, 103,
+
+-addoverwrite Resources\res_tweaked\wizards\system-installer_49x49.bmp,  BITMAP, 112,
+-addoverwrite Resources\res_tweaked\wizards\system-installer_49x49.bmp,  BITMAP, 113,
+-addoverwrite Resources\res_tweaked\wizards\system-installer_164x314.bmp,  BITMAP, 114,
+
+-addoverwrite Resources\res_tweaked\anim\folder_folder.avi,  AVI, 108, 

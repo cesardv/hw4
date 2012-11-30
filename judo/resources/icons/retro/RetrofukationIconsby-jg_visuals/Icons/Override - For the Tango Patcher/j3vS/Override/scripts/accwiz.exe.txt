@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\accwiz.exe
+SaveAs=   NewFiles\accwiz.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\wizards\preferences-desktop-accessibility_164x628.bmp,  BITMAP, 128,
+-addoverwrite Resources\res_tweaked\wizards\preferences-desktop-accessibility_49x49.bmp,  BITMAP, 129,

@@ -1,0 +1,11 @@
+[FILENAMES]
+Exe=      Backup\r2brand.dll
+SaveAs=   NewFiles\r2brand.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\branding\72_srvstd.bmp, BITMAP, 1002,
+-addoverwrite Resources\res_tweaked\branding\72_srvent.bmp, BITMAP, 1004,
+-addoverwrite Resources\res_tweaked\branding\72_srvdata.bmp, BITMAP, 1006,
+-addoverwrite Resources\res_tweaked\logon.scr\200.bmp, BITMAP, 1007, 
+-addoverwrite Resources\res_tweaked\logon.scr\202.bmp, BITMAP, 1008, 
+-addoverwrite Resources\res_tweaked\logon.scr\203.bmp, BITMAP, 1009, 

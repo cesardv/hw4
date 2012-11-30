@@ -1,0 +1,11 @@
+[FILENAMES]
+Exe=      Backup\main.cpl
+SaveAs=   NewFiles\main.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\input-mouse.ico,  ICONGROUP,100,
+-addoverwrite Resources\res_named\devices\input-keyboard.ico,  ICONGROUP,200,
+-addoverwrite Resources\res_named\apps\preferences-desktop-font.ico,  ICONGROUP,400,
+-addoverwrite Resources\res_named\categories\preferences-system.ico,  ICONGROUP,500,
+-addoverwrite Resources\res_named\places\folder.ico,  ICONGROUP,605,
+-addoverwrite Resources\res_named\status\folder-open.ico,  ICONGROUP,606,

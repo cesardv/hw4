@@ -1,0 +1,18 @@
+[FILENAMES]
+Exe=      Backup\setupapi.dll
+SaveAs=   NewFiles\setupapi.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\video-display.ico,  ICONGROUP, 1,
+-addoverwrite Resources\res_named\devices\input-mouse.ico,  ICONGROUP, 2,
+-addoverwrite Resources\res_named\devices\input-keyboard.ico,  ICONGROUP, 3,
+-addoverwrite Resources\res_named\devices\printer.ico,  ICONGROUP, 4,
+-addoverwrite Resources\res_named\devices\input-gaming.ico,  ICONGROUP, 24,
+-addoverwrite Resources\res_named\devices\computer.ico,  ICONGROUP, 27,
+-addoverwrite Resources\res_unofficial\lokheed\cpu.ico,  ICONGROUP, 28,
+-addoverwrite Resources\res_named\mimetypes\application-certificate.ico,  ICONGROUP, 40,
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 42,
+-addoverwrite Resources\res_named\devices\media-floppy.ico,  ICONGROUP, 50,
+-addoverwrite Resources\res_named\devices\drive-optical.ico,  ICONGROUP, 51,
+-addoverwrite Resources\res_named\places\folder-remote.ico,  ICONGROUP, 52,
+-addoverwrite Resources\res_named\devices\drive-harddisk.ico,  ICONGROUP, 53,

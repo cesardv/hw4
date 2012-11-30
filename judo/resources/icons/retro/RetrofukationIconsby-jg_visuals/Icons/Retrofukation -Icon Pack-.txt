@@ -1,0 +1,21 @@
+Much love went into these, some of the system icons are loosely inspired by the Tango Desktop Project. 
+http://tango.freedesktop.org/Tango_Desktop_Project
+However the are completely done from scratch.  Hope you enjoy.  Maybe an addon pack will be released if there is enough demand.  
+
+Included is a means to patch your system with the icons (check the Override - Readme), iconpackager themes, and the icons themeselves.
+
+Check out my profile for the rest of the retrofukation suite & please enjoy!
+
+Much gratitude to Matthew (blueslaad), Jared (j3concepts), Mauricio (manicho), Torsten (novoo), Marius (imrik)
+For their involvement & contributions to the suite.  Thanks for the amazing work guys.
+
+*****************************************************************************************
+*STOP:  This is not open source, please respect the original authors work.  No mod's 
+without permission please.
+
+Jamie
+-jg-
+
+http://jg-visuals.deviantart.com/
+http://customize.org/jg-visuals
+jg.visuals@gmail.com

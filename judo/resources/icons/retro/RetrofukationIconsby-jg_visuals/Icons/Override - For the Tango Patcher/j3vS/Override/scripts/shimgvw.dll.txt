@@ -1,0 +1,17 @@
+[FILENAMES]
+Exe=      Backup\shimgvw.dll
+SaveAs=   NewFiles\shimgvw.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\mimetypes\blank.ico,  ICONGROUP, 1, 
+-addoverwrite Resources\res_named\mimetypes\image-x-generic.ico,  ICONGROUP, 2, 
+-addoverwrite Resources\res_named\mimetypes\image-x-generic.ico,  ICONGROUP, 3, 
+-addoverwrite Resources\res_named\mimetypes\image-x-generic.ico,  ICONGROUP, 4, 
+-addoverwrite Resources\res_named\mimetypes\image-x-generic.ico,  ICONGROUP, 5, 
+-addoverwrite Resources\res_named\mimetypes\image-x-generic.ico,  ICONGROUP, 6, 
+-addoverwrite Resources\res_named\apps\internet-mail.ico,  ICONGROUP, 7, 
+
+-addoverwrite Resources\res_tweaked\shimgvw.dll\105+107.bmp,  BITMAP, 105, 
+-addoverwrite Resources\res_tweaked\shimgvw.dll\105+107.bmp,  BITMAP, 107, 
+-addoverwrite Resources\res_tweaked\shimgvw.dll\109+111.bmp,  BITMAP, 109, 
+-addoverwrite Resources\res_tweaked\shimgvw.dll\109+111.bmp,  BITMAP, 111, 

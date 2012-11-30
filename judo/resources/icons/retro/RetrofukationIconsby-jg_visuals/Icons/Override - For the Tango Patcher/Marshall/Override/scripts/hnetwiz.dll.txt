@@ -1,0 +1,12 @@
+[FILENAMES]
+Exe=      Backup\hnetwiz.dll
+SaveAs=   NewFiles\hnetwiz.dll
+
+[COMMANDS]
+;-addoverwrite Resources\res_unofficial\vertigo\network-workgroup-magic.ico,  ICONGROUP, 10000,
+-addoverwrite Resources\res_named\apps\help-browser.ico,  ICONGROUP, 10001,
+-addoverwrite Resources\res_named\status\dialog-information.ico,  ICONGROUP, 10002,
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 10003,
+
+;-addoverwrite Resources\res_tweaked\wizards\network-workgroup-magic_164x628.bmp,  BITMAP, 1,
+;-addoverwrite Resources\res_tweaked\wizards\network-workgroup-magic_49x49.bmp,  BITMAP, 2,

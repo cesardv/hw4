@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\desk.cpl
+SaveAs=   NewFiles\desk.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\preferences-desktop-wallpaper.ico,  ICONGROUP, 40,
+-addoverwrite Resources\res_named\apps\preferences-desktop-wallpaper.ico,  ICONGROUP, 100,

@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\winsrv.dll
+SaveAs=   NewFiles\winsrv.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\utilities-terminal.ico,  ICONGROUP, 1, 

@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\timedate.cpl
+SaveAs=   NewFiles\timedate.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\tangerine-icon-theme\apps\config-date.ico,  ICONGROUP, 200,

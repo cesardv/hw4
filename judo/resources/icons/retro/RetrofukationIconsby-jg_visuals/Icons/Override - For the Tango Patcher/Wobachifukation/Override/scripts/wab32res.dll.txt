@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=      Backup\wab32res.dll
+SaveAs=   NewFiles\wab32res.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\wab32res.dll\4136+4137.bmp,  BITMAP, 4136, 
+-addoverwrite Resources\res_tweaked\wab32res.dll\4136+4137.bmp,  BITMAP, 4137, 
+-addoverwrite Resources\res_tweaked\wab32res.dll\4138.bmp,  BITMAP, 4138, 

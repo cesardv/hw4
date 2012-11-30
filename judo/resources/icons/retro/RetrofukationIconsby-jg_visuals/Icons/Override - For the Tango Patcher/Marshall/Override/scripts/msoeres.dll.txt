@@ -1,0 +1,13 @@
+[FILENAMES]
+Exe=      Backup\msoeres.dll
+SaveAs=   NewFiles\msoeres.dll
+
+[COMMANDS]
+
+-addoverwrite Resources\res_tweaked\msoeres.dll\72+73.bmp, BITMAP, 72, 
+-addoverwrite Resources\res_tweaked\msoeres.dll\72+73.bmp, BITMAP, 73, 
+
+-addoverwrite Resources\res_tweaked\msoeres.dll\74+75.bmp, BITMAP, 74, 
+-addoverwrite Resources\res_tweaked\msoeres.dll\74+75.bmp, BITMAP, 75, 
+
+-addoverwrite Resources\res_tweaked\anim\folder_folder.avi,  AVI, 9, 

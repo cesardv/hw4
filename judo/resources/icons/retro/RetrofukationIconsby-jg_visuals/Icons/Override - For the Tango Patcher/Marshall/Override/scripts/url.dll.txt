@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=	"Backup\url.dll"
+SaveAs=	"NewFiles\url.dll"
+
+[COMMANDS]
+-addoverwrite Resources\res_named\mimetypes\text-html.ico, ICONGROUP, 102,  

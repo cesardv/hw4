@@ -1,0 +1,9 @@
+[FILENAMES]
+Exe=	Backup\stobject.dll
+SaveAs=	NewFiles\stobject.dll
+
+[COMMANDS]
+
+-addoverwrite Resources\res_named\actions\media-eject.ico, ICONGROUP, 210,
+-addoverwrite Resources\res_named\status\audio-volume-high.ico, ICONGROUP, 230,
+-addoverwrite Resources\res_named\status\audio-volume-muted.ico, ICONGROUP, 231,

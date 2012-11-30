@@ -1,0 +1,11 @@
+[FILENAMES]
+Exe=      Backup\wucltui.dll
+SaveAs=   NewFiles\wucltui.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\system-software-update.ico,  ICONGROUP, 1, 
+-addoverwrite Resources\res_unofficial\vertigo\security-main.ico,  ICONGROUP, 2, 
+-addoverwrite Resources\res_unofficial\vertigo\security-ok.ico,  ICONGROUP, 3, 
+-addoverwrite Resources\res_named\apps\system-software-update.ico,  ICONGROUP, 4, 
+-addoverwrite Resources\res_unofficial\vertigo\security-error.ico,  ICONGROUP, 5, 
+-addoverwrite Resources\res_named\apps\system-software-update.ico,  ICONGROUP, 61101, 

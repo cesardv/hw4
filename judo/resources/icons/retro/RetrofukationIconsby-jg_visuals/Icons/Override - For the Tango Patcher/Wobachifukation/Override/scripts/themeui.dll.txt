@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=      Backup\themeui.dll
+SaveAs=   NewFiles\themeui.dll
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\preferences-desktop-theme.ico,  ICONGROUP, 701,
+
+-addoverwrite Resources\res_tweaked\themeui.dll\126.bmp,  BITMAP, 126,
+

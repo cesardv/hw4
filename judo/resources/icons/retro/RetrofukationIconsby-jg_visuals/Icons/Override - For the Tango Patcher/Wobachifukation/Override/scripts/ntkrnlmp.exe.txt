@@ -1,0 +1,13 @@
+[FILENAMES]
+Exe=      Backup\ntkrnlmp.exe
+SaveAs=   NewFiles\ntkrnlmp.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\bootsplash\1.bmp,  BITMAP, 1,
+-addoverwrite Resources\res_tweaked\bootsplash\8.bmp,  BITMAP, 8,
+-addoverwrite Resources\res_tweaked\bootsplash\9.bmp,  BITMAP, 9,
+-addoverwrite Resources\res_tweaked\bootsplash\13.bmp,  BITMAP, 13,
+
+-addoverwrite Resources\res_tweaked\bootsplash\2.bmp,  BITMAP, 2,
+-addoverwrite Resources\res_tweaked\bootsplash\3.bmp,  BITMAP, 3,
+-addoverwrite Resources\res_tweaked\bootsplash\5.bmp,  BITMAP, 5,

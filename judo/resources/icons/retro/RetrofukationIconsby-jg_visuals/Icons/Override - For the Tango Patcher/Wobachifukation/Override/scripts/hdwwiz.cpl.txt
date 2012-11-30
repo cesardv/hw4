@@ -1,0 +1,10 @@
+[FILENAMES]
+Exe=      Backup\hdwwiz.cpl
+SaveAs=   NewFiles\hdwwiz.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\media-flash.ico,  ICONGROUP, 100,
+
+-addoverwrite Resources\res_tweaked\wizards\media-flash_164x628.bmp,  BITMAP, 106,
+-addoverwrite Resources\res_tweaked\wizards\media-flash_49x49.bmp,  BITMAP, 107,
+

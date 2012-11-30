@@ -1,0 +1,9 @@
+[FILENAMES]
+Exe=	Backup\sndvol32.exe
+SaveAs=	NewFiles\sndvol32.exe
+
+[COMMANDS]
+
+-addoverwrite Resources\res_unofficial\tango-deprecated\apps-multimedia-volume-control.ico, ICONGROUP, 300,
+-addoverwrite Resources\res_named\status\audio-volume-muted.ico, ICONGROUP, 303,
+-addoverwrite Resources\res_named\status\audio-volume-high.ico, ICONGROUP, 304,

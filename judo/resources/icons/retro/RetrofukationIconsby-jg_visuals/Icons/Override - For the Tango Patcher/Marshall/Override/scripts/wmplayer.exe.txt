@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=	"Backup\wmplayer.exe"
+SaveAs=	"NewFiles\wmplayer.exe"
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\totem\totem.ico, ICONGROUP, IDR_MAINFRAME, 
+-addoverwrite Resources\res_named\categories\applications-multimedia.ico, ICONGROUP, 120, 
+

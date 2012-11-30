@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\wab.exe
+SaveAs=   NewFiles\wab.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\mimetypes\x-office-address-book.ico,  ICONGROUP, idi_icon_abook,
+-addoverwrite Resources\res_unofficial\vertigo\contact.ico,  ICONGROUP, idi_icon_vcard,

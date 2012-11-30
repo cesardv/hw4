@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\syssetup.dll
+SaveAs=   NewFiles\syssetup.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\media-floppy.ico,  ICONGROUP, 102,

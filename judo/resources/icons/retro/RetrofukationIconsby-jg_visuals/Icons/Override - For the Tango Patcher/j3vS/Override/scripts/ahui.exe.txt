@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\ahui.exe
+SaveAs=   NewFiles\ahui.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\status\dialog-information.ico,  ICONGROUP, 2006,

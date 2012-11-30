@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\charmap.exe
+SaveAs=   NewFiles\charmap.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\accessories-character-map.ico,  ICONGROUP,111,

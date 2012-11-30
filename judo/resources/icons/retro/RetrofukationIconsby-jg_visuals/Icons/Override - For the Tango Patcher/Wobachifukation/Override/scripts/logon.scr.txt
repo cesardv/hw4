@@ -1,0 +1,17 @@
+[FILENAMES]
+Exe=      Backup\logon.scr
+SaveAs=   NewFiles\logon.scr
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\logon.scr\1.ico,  ICONGROUP, 1,
+
+-addoverwrite Resources\res_tweaked\logon.scr\200.bmp,  BITMAP, 200,
+-addoverwrite Resources\res_tweaked\logon.scr\201.bmp,  BITMAP, 201,
+-addoverwrite Resources\res_tweaked\logon.scr\202.bmp,  BITMAP, 202,
+-addoverwrite Resources\res_tweaked\logon.scr\203.bmp,  BITMAP, 203,
+-addoverwrite Resources\res_tweaked\logon.scr\204.bmp,  BITMAP, 204,
+-addoverwrite Resources\res_tweaked\logon.scr\205.bmp,  BITMAP, 205,
+-addoverwrite Resources\res_tweaked\logon.scr\206.bmp,  BITMAP, 206,
+-addoverwrite Resources\res_tweaked\logon.scr\207.bmp,  BITMAP, 207,
+-addoverwrite Resources\res_tweaked\logon.scr\208.bmp,  BITMAP, 208,
+-addoverwrite Resources\res_tweaked\logon.scr\212.bmp,  BITMAP, 212,

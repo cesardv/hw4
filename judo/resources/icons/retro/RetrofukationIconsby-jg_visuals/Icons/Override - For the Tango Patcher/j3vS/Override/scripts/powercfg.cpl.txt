@@ -1,0 +1,10 @@
+[FILENAMES]
+Exe=      Backup\powercfg.cpl
+SaveAs=   NewFiles\powercfg.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\specific_size\ac-adapter_32+16.ico,  ICONGROUP, 200,
+-addoverwrite Resources\res_tweaked\specific_size\battery_32.ico,  ICONGROUP, 201,
+-addoverwrite Resources\res_unofficial\gnome-power-manager\gpm-primary-000-charging.ico,  ICONGROUP, 202,
+-addoverwrite Resources\res_tweaked\specific_size\preferences-desktop-screensaver_32.ico,  ICONGROUP, 203,
+-addoverwrite Resources\res_tweaked\powercfg.cpl\204.ico,  ICONGROUP, 204,

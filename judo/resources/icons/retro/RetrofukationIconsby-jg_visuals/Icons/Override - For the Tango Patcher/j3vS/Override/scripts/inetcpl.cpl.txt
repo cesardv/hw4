@@ -1,0 +1,19 @@
+[FILENAMES]
+Exe=      Backup\inetcpl.cpl
+SaveAs=   NewFiles\inetcpl.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\actions\go-home.ico,  ICONGROUP, 1301, 
+-addoverwrite Resources\res_unofficial\tango-deprecated\actions-document-history.ico,  ICONGROUP, 1303, 
+-addoverwrite Resources\res_named\mimetypes\font-x-generic.ico,  ICONGROUP, 1304, 
+-addoverwrite Resources\res_named\mimetypes\application-certificate.ico,  ICONGROUP, 1310, 
+-addoverwrite Resources\res_named\categories\applications-internet.ico,  ICONGROUP, 1313,
+-addoverwrite Resources\res_named\apps\preferences-system-network-proxy.ico,  ICONGROUP, 4460, 
+-addoverwrite Resources\res_unofficial\vertigo\security-error.ico,  ICONGROUP, 4480, 
+-addoverwrite Resources\res_unofficial\vertigo\security-ok.ico,  ICONGROUP, 4481, 
+-addoverwrite Resources\res_named\actions\system-search.ico,  ICONGROUP, 4483,
+-addoverwrite Resources\res_unofficial\vertigo\internet-web-browser-msie.ico,  ICONGROUP, 4487,
+-addoverwrite Resources\res_unofficial\vertigo\system-appchooser.ico,  ICONGROUP, 4490, 
+-addoverwrite Resources\res_unofficial\sgarrity\rss.ico,  ICONGROUP, 4498, 
+-addoverwrite Resources\res_named\actions\tab-new.ico,  ICONGROUP, 5507, 
+-addoverwrite Resources\res_unofficial\joneslee\extension.ico,  ICONGROUP, 5901, 

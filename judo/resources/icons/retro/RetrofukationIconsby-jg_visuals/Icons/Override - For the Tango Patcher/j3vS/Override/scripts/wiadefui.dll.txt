@@ -1,0 +1,10 @@
+[FILENAMES]
+Exe=	Backup\wiadefui.dll
+SaveAs=	NewFiles\wiadefui.dll
+
+[COMMANDS]
+
+
+-addoverwrite Resources\res_named\devices\camera-photo.ico, ICONGROUP, 104, 
+-addoverwrite Resources\res_unofficial\git2\scanner.ico, ICONGROUP, 105, 
+-addoverwrite Resources\res_named\devices\camera-video.ico, ICONGROUP, 108,

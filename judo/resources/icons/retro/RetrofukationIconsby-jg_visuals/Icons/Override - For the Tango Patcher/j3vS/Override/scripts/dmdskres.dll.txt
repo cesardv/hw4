@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\dmdskres.dll
+SaveAs=   NewFiles\dmdskres.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\tangerine-icon-theme\apps\gnome-fs-blockdev.ico,  ICONGROUP, 344,

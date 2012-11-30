@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=      Backup\cleanmgr.exe
+SaveAs=   NewFiles\cleanmgr.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\actions\edit-clear.ico,  ICONGROUP, 104,
+-addoverwrite Resources\res_unofficial\vertigo\file-generic.ico,  ICONGROUP, 111,
+-addoverwrite Resources\res_tweaked\specific_size\system-installer_32.ico,  ICONGROUP, 113,

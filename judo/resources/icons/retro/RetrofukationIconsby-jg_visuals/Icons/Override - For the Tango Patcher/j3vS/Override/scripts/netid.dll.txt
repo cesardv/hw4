@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\netid.dll
+SaveAs=   NewFiles\netid.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\places\network-server.ico,  ICONGROUP, 101,
+-addoverwrite Resources\res_tweaked\specific_size\dialog-warning_16.ico,  ICONGROUP, 102,

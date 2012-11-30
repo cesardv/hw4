@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\netplwiz.dll
+SaveAs=   NewFiles\netplwiz.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\system-users.ico,  ICONGROUP, 102,
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 200,

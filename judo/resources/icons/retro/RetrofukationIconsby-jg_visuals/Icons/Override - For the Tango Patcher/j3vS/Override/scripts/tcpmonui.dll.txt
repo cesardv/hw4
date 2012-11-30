@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\tcpmonui.dll
+SaveAs=   NewFiles\tcpmonui.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\wizards\printer_164x312.bmp,  BITMAP, 108,
+-addoverwrite Resources\res_tweaked\wizards\printer_49x49.bmp,  BITMAP, 109,

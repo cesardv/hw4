@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\msi.dll
+SaveAs=   NewFiles\msi.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\system-installer.ico,  ICONGROUP, 203,

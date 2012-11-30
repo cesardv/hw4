@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\cmd.exe
+SaveAs=   NewFiles\cmd.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\utilities-terminal.ico,  ICONGROUP, idi_appicon,

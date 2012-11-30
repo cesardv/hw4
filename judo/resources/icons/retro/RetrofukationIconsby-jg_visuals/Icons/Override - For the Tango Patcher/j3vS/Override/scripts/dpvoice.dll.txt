@@ -1,0 +1,10 @@
+[FILENAMES]
+Exe=      Backup\dpvoice.dll
+SaveAs=   NewFiles\dpvoice.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\audio-input-microphone.ico,  ICONGROUP, 124,
+-addoverwrite Resources\res_named\devices\audio-card.ico,  ICONGROUP, 125,
+
+-addoverwrite Resources\res_tweaked\wizards\audio-card_164x628.bmp,  BITMAP, 126,
+

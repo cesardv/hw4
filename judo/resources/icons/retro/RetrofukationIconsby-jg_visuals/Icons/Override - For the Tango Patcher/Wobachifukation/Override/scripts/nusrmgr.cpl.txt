@@ -1,0 +1,17 @@
+[FILENAMES]
+Exe=      Backup\nusrmgr.cpl
+SaveAs=   NewFiles\nusrmgr.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\system-users.ico,  ICONGROUP, 200,
+-addoverwrite Resources\res_named\mimetypes\image-x-generic.ico,  ICONGROUP, 205,
+
+-addoverwrite Resources\res_tweaked\nusrmgr.cpl\203+204.bmp,  BITMAP,203,
+-addoverwrite Resources\res_tweaked\nusrmgr.cpl\203+204.bmp,  BITMAP,204,
+
+-addoverwrite Resources\res_tweaked\nusrmgr.cpl\camera-photo_16.notico,  "23", "CAMERA.ICO",
+-addoverwrite Resources\res_tweaked\nusrmgr.cpl\help-browser_16.notico,  "23", "HELPDOC.ICO",
+-addoverwrite Resources\res_tweaked\nusrmgr.cpl\document-open_16.notico,  "23", "STFIND_3.ICO",
+-addoverwrite Resources\res_tweaked\nusrmgr.cpl\system-users_32_8pp.notico,  "23", "USERS32.ICO",
+-addoverwrite Resources\res_tweaked\nusrmgr.cpl\system-users_32_8pp.gif,  "23", "USERS32.GIF",
+-addoverwrite Resources\res_tweaked\nusrmgr.cpl\system-users.notico,  "23", "USERS.ICO",

@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=      Backup\devmgr.dll
+SaveAs=   NewFiles\devmgr.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\media-flash.ico,  ICONGROUP, 201,
+-addoverwrite Resources\res_tweaked\wizards\media-flash_164x314.bmp,  BITMAP, 214,
+-addoverwrite Resources\res_tweaked\wizards\media-flash_49x49.bmp,  BITMAP, 215,

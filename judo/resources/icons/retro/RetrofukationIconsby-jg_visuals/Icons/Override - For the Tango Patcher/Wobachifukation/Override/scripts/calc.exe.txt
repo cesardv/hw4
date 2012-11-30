@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\calc.exe
+SaveAs=   NewFiles\calc.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\accessories-calculator.ico,  ICONGROUP,SC,

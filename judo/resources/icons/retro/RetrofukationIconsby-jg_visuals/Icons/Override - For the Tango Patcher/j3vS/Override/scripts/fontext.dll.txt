@@ -1,0 +1,13 @@
+[FILENAMES]
+Exe=      Backup\fontext.dll
+SaveAs=   NewFiles\fontext.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\preferences-desktop-font.ico,  ICONGROUP, 1, 
+-addoverwrite Resources\res_named\mimetypes\font-x-generic.ico,  ICONGROUP, 2, 
+-addoverwrite Resources\res_named\mimetypes\font-x-generic.ico,  ICONGROUP, 3, 
+-addoverwrite Resources\res_named\mimetypes\font-x-generic.ico,  ICONGROUP, 4, 
+-addoverwrite Resources\res_named\mimetypes\font-x-generic.ico,  ICONGROUP, 5, 
+-addoverwrite Resources\res_named\mimetypes\font-x-generic.ico,  ICONGROUP, 6, 
+-addoverwrite Resources\res_named\mimetypes\font-x-generic.ico,  ICONGROUP, 7, 
+

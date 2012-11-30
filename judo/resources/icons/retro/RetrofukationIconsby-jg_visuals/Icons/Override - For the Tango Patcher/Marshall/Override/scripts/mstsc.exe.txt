@@ -1,0 +1,35 @@
+[FILENAMES]
+Exe=      Backup\mstsc.exe
+SaveAs=   NewFiles\mstsc.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\preferences-desktop-remote-desktop.ico,  ICONGROUP, 101,
+-addoverwrite Resources\res_named\places\network-workgroup.ico,  ICONGROUP, 380,
+-addoverwrite Resources\res_named\places\network-server.ico,  ICONGROUP, 381,
+-addoverwrite Resources\res_named\devices\video-display.ico,  ICONGROUP, 386,
+-addoverwrite Resources\res_named\devices\drive-harddisk.ico,  ICONGROUP, 387,
+-addoverwrite Resources\res_named\devices\input-keyboard.ico,  ICONGROUP, 388,
+-addoverwrite Resources\res_named\devices\audio-card.ico,  ICONGROUP, 389,
+-addoverwrite Resources\res_named\actions\document-open.ico,  ICONGROUP, 390,
+-addoverwrite Resources\res_named\places\network-server.ico,  ICONGROUP, 391,
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 399,
+-addoverwrite Resources\res_named\status\dialog-error.ico,  ICONGROUP, 400,
+-addoverwrite Resources\res_named\apps\utilities-system-monitor.ico,  ICONGROUP, 401,
+-addoverwrite Resources\res_named\places\network-server.ico,  ICONGROUP, 402,
+
+-addoverwrite Resources\res_named\mimetypes\application-certificate.ico,  ICONGROUP, 13000,
+-addoverwrite Resources\res_named\apps\preferences-system-network-proxy.ico,  ICONGROUP, 13001,
+-addoverwrite Resources\res_named\devices\video-display.ico,  ICONGROUP, 13002,
+-addoverwrite Resources\res_named\devices\input-keyboard.ico,  ICONGROUP, 13003,
+-addoverwrite Resources\res_named\devices\audio-card.ico,  ICONGROUP, 13004,
+-addoverwrite Resources\res_named\actions\document-open.ico,  ICONGROUP, 13005,
+-addoverwrite Resources\res_named\apps\utilities-system-monitor.ico,  ICONGROUP, 13006,
+-addoverwrite Resources\res_named\places\network-server.ico,  ICONGROUP, 13007,
+-addoverwrite Resources\res_unofficial\git2\actions-system-run.ico,  ICONGROUP, 13010,
+
+-addoverwrite Resources\res_tweaked\mstsc.exe\619.bmp,  BITMAP, 619,
+-addoverwrite Resources\res_tweaked\mstsc.exe\625.bmp,  BITMAP, 625,
+-addoverwrite Resources\res_tweaked\mstsc.exe\675.bmp,  BITMAP, 675,
+-addoverwrite Resources\res_tweaked\mstsc.exe\676.bmp,  BITMAP, 676,
+-addoverwrite Resources\res_tweaked\mstsc.exe\677.bmp,  BITMAP, 677,
+

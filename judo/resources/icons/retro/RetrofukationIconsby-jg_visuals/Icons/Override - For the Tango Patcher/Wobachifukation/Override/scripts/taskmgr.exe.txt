@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\taskmgr.exe
+SaveAs=   NewFiles\taskmgr.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\utilities-system-monitor.ico,  ICONGROUP, 107, 

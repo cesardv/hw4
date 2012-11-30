@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=      Backup\gcdef.dll
+SaveAs=   NewFiles\gcdef.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\input-gaming.ico,  ICONGROUP, 108,
+-addoverwrite Resources\res_tweaked\wizards\input-gaming_164x314.bmp,  BITMAP, 115,
+-addoverwrite Resources\res_tweaked\wizards\input-gaming_49x49.bmp,  BITMAP, 129,

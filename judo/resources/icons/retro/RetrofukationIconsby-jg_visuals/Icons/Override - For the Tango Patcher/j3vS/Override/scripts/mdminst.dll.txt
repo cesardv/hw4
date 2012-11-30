@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=      Backup\mdminst.dll
+SaveAs=   NewFiles\mdminst.dll
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\yast2-industrial\yast-modem.ico,  ICONGROUP, 5100,
+
+-addoverwrite Resources\res_tweaked\wizards\telephone_132x252.bmp,  BITMAP, 101,
+

@@ -1,0 +1,10 @@
+[FILENAMES]
+Exe=      Backup\wuaucpl.cpl
+SaveAs=   NewFiles\wuaucpl.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\system-software-update.ico,  ICONGROUP, 1, 
+-addoverwrite Resources\res_unofficial\vertigo\security-main.ico,  ICONGROUP, 2, 
+-addoverwrite Resources\res_unofficial\vertigo\security-ok.ico,  ICONGROUP, 3, 
+-addoverwrite Resources\res_unofficial\vertigo\security-warning.ico,  ICONGROUP, 4, 
+-addoverwrite Resources\res_unofficial\vertigo\security-error.ico,  ICONGROUP, 5, 

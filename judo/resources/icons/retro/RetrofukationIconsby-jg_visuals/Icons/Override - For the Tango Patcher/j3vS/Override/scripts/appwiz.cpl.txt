@@ -1,0 +1,9 @@
+[FILENAMES]
+Exe=      Backup\appwiz.cpl
+SaveAs=   NewFiles\appwiz.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\system-installer.ico,  ICONGROUP, 1500,
+
+-addoverwrite Resources\res_tweaked\wizards\system-installer_132x252.bmp,  BITMAP, 5000,
+-addoverwrite Resources\res_tweaked\wizards\emblem-symbolic-link_132x252.bmp,  BITMAP, 5001,

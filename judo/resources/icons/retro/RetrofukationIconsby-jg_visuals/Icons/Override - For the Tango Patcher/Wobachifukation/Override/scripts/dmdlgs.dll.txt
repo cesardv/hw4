@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=      Backup\dmdlgs.dll
+SaveAs=   NewFiles\dmdlgs.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\wizards\gnome-fs-blockdev_164x628.bmp,  BITMAP, 105,
+-addoverwrite Resources\res_tweaked\wizards\gnome-fs-blockdev_49x49.bmp,  BITMAP, 215,
+-addoverwrite Resources\res_tweaked\wizards\gnome-fs-blockdev_164x628.bmp,  BITMAP, 249,

@@ -1,0 +1,11 @@
+[FILENAMES]
+Exe=      Backup\wuauclt1.exe
+SaveAs=   NewFiles\wuauclt1.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\system-software-update.ico,  ICONGROUP, 301, 
+-addoverwrite Resources\res_tweaked\specific_size\dialog-information_16.ico,  ICONGROUP, 304, 
+-addoverwrite Resources\res_tweaked\wuauclt1.exe\740.ico,  ICONGROUP, 740, 
+
+-addoverwrite Resources\res_tweaked\wizards\system-software-update_164x314.bmp,  BITMAP, 401,
+-addoverwrite Resources\res_tweaked\wizards\system-software-update_49x49.bmp,  BITMAP, 402,

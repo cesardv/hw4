@@ -1,0 +1,10 @@
+[FILENAMES]
+Exe=      Backup\printui.dll
+SaveAs=   NewFiles\printui.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\status\printer-error.ico,  ICONGROUP, 132,
+-addoverwrite Resources\res_named\devices\printer.ico,  ICONGROUP, 420,
+
+-addoverwrite Resources\res_tweaked\wizards\printer_164x628.bmp,  BITMAP, 426,
+-addoverwrite Resources\res_tweaked\wizards\printer_49x49.bmp,  BITMAP, 427,

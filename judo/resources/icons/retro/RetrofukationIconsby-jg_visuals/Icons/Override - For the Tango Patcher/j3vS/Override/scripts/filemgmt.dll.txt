@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\filemgmt.dll
+SaveAs=   NewFiles\filemgmt.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\composite\places-folder-shared.ico,  ICONGROUP, 237,

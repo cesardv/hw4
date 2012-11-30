@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\helpctr.exe
+SaveAs=   NewFiles\helpctr.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\help-browser.ico,  ICONGROUP, 200,

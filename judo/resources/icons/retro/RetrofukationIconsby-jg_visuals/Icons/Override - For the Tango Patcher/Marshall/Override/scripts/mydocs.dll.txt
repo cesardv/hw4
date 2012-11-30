@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\mydocs.dll
+SaveAs=   NewFiles\mydocs.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\composite\places-user-docs.ico,  ICONGROUP, 100, 
+-addoverwrite Resources\res_unofficial\composite\places-user-photos.ico,  ICONGROUP, 101, 

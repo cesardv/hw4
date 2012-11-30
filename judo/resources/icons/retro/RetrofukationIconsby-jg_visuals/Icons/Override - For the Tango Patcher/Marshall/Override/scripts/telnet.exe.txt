@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\telnet.exe
+SaveAs=   NewFiles\telnet.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\vertigo\preferences-desktop-remote-console.ico,  ICONGROUP, TELNET,

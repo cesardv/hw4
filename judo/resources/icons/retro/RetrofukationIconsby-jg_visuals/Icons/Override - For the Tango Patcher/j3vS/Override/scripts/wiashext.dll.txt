@@ -1,0 +1,12 @@
+[FILENAMES]
+Exe=	Backup\wiashext.dll
+SaveAs=	NewFiles\wiashext.dll
+
+[COMMANDS]
+
+-addoverwrite Resources\res_unofficial\git2\scanner.ico, ICONGROUP, 100, 
+-addoverwrite Resources\res_named\devices\camera-photo.ico, ICONGROUP, 101, 
+-addoverwrite Resources\res_unofficial\git2\scanner.ico, ICONGROUP, 102, 
+-addoverwrite Resources\res_named\mimetypes\image-x-generic.ico, ICONGROUP, 103, 
+-addoverwrite Resources\res_named\mimetypes\image-x-generic.ico, ICONGROUP, 107, 
+-addoverwrite Resources\res_named\devices\camera-video.ico, ICONGROUP, 114,

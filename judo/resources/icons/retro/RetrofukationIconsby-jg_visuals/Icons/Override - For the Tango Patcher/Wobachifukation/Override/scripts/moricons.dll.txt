@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\moricons.dll
+SaveAs=   NewFiles\moricons.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\vertigo\system-appchooser.ico,  ICONGROUP, 114,

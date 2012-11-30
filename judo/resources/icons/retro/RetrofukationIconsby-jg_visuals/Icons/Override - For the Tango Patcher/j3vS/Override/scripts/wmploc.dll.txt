@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=	"Backup\wmploc.dll"
+SaveAs=	"NewFiles\wmploc.dll"
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\totem\totem.ico, ICONGROUP, 102, 
+-addoverwrite Resources\res_named\categories\applications-multimedia.ico, ICONGROUP, 466, 
+

@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\access.cpl
+SaveAs=   NewFiles\access.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\preferences-desktop-accessibility.ico,  ICONGROUP,110,

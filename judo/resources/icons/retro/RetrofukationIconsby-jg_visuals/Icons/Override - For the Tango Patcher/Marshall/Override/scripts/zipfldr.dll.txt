@@ -1,0 +1,11 @@
+[FILENAMES]
+Exe=      Backup\zipfldr.dll
+SaveAs=   NewFiles\zipfldr.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\mimetypes\package-x-generic.ico,  ICONGROUP, 101, 
+-addoverwrite Resources\res_named\mimetypes\package-x-generic.ico,  ICONGROUP, 123, 
+
+-addoverwrite Resources\res_tweaked\wizards\package-x-generic_117x225.bmp,  BITMAP, 164,
+-addoverwrite Resources\res_tweaked\wizards\package-x-generic_49x49.bmp,  BITMAP, 200,
+-addoverwrite Resources\res_tweaked\wizards\package-x-generic_164x628.bmp,  BITMAP, 201,

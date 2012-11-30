@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\srclient.dll
+SaveAs=   NewFiles\srclient.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\preferences-system-session.ico,  ICONGROUP, 0, 

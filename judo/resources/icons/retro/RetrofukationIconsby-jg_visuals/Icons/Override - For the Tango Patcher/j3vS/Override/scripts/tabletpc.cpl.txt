@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\tabletpc.cpl
+SaveAs=   NewFiles\tabletpc.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\tango-art-libre\devices\input-tablet.ico,  ICONGROUP, 10200,

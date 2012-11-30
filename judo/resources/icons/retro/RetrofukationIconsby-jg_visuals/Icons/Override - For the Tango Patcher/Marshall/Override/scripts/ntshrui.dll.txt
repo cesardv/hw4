@@ -1,0 +1,9 @@
+[FILENAMES]
+Exe=      Backup\ntshrui.dll
+SaveAs=   NewFiles\ntshrui.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\composite\places-folder-shared.ico,  ICONGROUP, 116, 
+-addoverwrite Resources\res_named\apps\system-users.ico,  ICONGROUP, 122,
+-addoverwrite Resources\res_named\places\network-workgroup.ico,  ICONGROUP, 123, 
+-addoverwrite Resources\res_tweaked\specific_size\security-warning_16.ico,  ICONGROUP, 127, 

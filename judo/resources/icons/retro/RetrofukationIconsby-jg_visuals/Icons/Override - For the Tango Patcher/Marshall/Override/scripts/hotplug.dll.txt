@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=	Backup\hotplug.dll
+SaveAs=	NewFiles\hotplug.dll
+
+[COMMANDS]
+
+-addoverwrite Resources\res_named\actions\media-eject.ico, ICONGROUP, 100,

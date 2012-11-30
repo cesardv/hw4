@@ -1,0 +1,37 @@
+[FILENAMES]
+Exe=      Backup\msgina.dll
+SaveAs=   NewFiles\msgina.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\actions\system-shutdown.ico,  ICONGROUP, IDI_TURNOFF_ICONRESOURCE,
+-addoverwrite Resources\res_named\actions\system-log-out.ico,  ICONGROUP, 21,
+-addoverwrite Resources\res_named\actions\system-shutdown.ico,  ICONGROUP, 22,
+-addoverwrite Resources\res_named\apps\preferences-desktop-keyboard-shortcuts.ico,  ICONGROUP, 109,
+-addoverwrite Resources\res_named\actions\system-lock-screen.ico,  ICONGROUP, 115,
+
+
+-addoverwrite Resources\res_tweaked\branding\72_pro.bmp, BITMAP, 101,
+-addoverwrite Resources\res_tweaked\branding\scrolly.bmp, BITMAP, 103,
+-addoverwrite Resources\res_tweaked\branding\88_pro.bmp, BITMAP, 107,
+-addoverwrite Resources\res_tweaked\branding\72_home.bmp, BITMAP, 128,
+-addoverwrite Resources\res_tweaked\branding\88_home.bmp, BITMAP, 129,
+-addoverwrite Resources\res_tweaked\branding\72_srvstd.bmp, BITMAP, 130,
+-addoverwrite Resources\res_tweaked\branding\88_srvstd.bmp, BITMAP, 131,
+-addoverwrite Resources\res_tweaked\branding\72_srvent.bmp, BITMAP, 132,
+-addoverwrite Resources\res_tweaked\branding\88_srvent.bmp, BITMAP, 133,
+-addoverwrite Resources\res_tweaked\branding\72_srvdata.bmp, BITMAP, 134,
+-addoverwrite Resources\res_tweaked\branding\88_srvdata.bmp, BITMAP, 135,
+-addoverwrite Resources\res_tweaked\branding\88_embed.bmp, BITMAP, 136,
+-addoverwrite Resources\res_tweaked\branding\88_embed.bmp, BITMAP, 137,
+-addoverwrite Resources\res_tweaked\branding\88_srvsbs.bmp, BITMAP, 144,
+-addoverwrite Resources\res_tweaked\branding\88_srvweb.bmp, BITMAP, 145,
+-addoverwrite Resources\res_tweaked\branding\72_srvsbs.bmp, BITMAP, 146,
+-addoverwrite Resources\res_tweaked\branding\72_srvweb.bmp, BITMAP, 147,
+
+-addoverwrite Resources\res_tweaked\logoff_dialog\background_dark.bmp,  BITMAP, 20140, 
+-addoverwrite Resources\res_tweaked\logoff_dialog\flag32.bmp,  BITMAP, 20141, 
+-addoverwrite Resources\res_tweaked\logoff_dialog\background_lite.bmp,  BITMAP, 20142, 
+-addoverwrite Resources\res_tweaked\logoff_dialog\flag24.bmp,  BITMAP, 20143, 
+-addoverwrite Resources\res_tweaked\msgina.dll\20144.bmp,  BITMAP, 20144, 
+-addoverwrite Resources\res_tweaked\msgina.dll\20145.bmp,  BITMAP, 20145, 
+-addoverwrite Resources\res_tweaked\logoff_dialog\buttons_turnoff.bmp,  BITMAP, 20150, 

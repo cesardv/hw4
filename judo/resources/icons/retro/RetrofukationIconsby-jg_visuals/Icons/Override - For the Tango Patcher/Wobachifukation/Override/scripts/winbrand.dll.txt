@@ -1,0 +1,23 @@
+[FILENAMES]
+Exe=      Backup\winbrand.dll
+SaveAs=   NewFiles\winbrand.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\branding\72_tablet.bmp, BITMAP, 1000,
+-addoverwrite Resources\res_tweaked\branding\88_tablet.bmp, BITMAP, 1001,
+-addoverwrite Resources\res_tweaked\branding\72_mce.bmp, BITMAP, 1004,
+-addoverwrite Resources\res_tweaked\branding\88_mce.bmp, BITMAP, 1005,
+-addoverwrite Resources\res_tweaked\branding\72_strt.bmp, BITMAP, 1010,
+-addoverwrite Resources\res_tweaked\branding\88_strt.bmp, BITMAP, 1011,
+-addoverwrite Resources\res_tweaked\branding\72_embed.bmp, BITMAP, 1016,
+-addoverwrite Resources\res_tweaked\branding\88_embed.bmp, BITMAP, 1017,
+-addoverwrite Resources\res_tweaked\branding\72_flp.bmp, BITMAP, 1020,
+-addoverwrite Resources\res_tweaked\branding\88_flp.bmp, BITMAP, 1021,
+-addoverwrite Resources\res_tweaked\branding\72_tablet.bmp, BITMAP, 1101,
+-addoverwrite Resources\res_tweaked\branding\72_mce.bmp, BITMAP, 1103,
+-addoverwrite Resources\res_tweaked\branding\72_strt.bmp, BITMAP, 1105,
+-addoverwrite Resources\res_tweaked\branding\72_embed.bmp, BITMAP, 1107,
+-addoverwrite Resources\res_tweaked\branding\72_flp.bmp, BITMAP, 1109,
+-addoverwrite Resources\res_tweaked\logon.scr\208.bmp, BITMAP, 1200,
+-addoverwrite Resources\res_tweaked\winbrand.dll\1201.bmp, BITMAP, 1201,
+-addoverwrite Resources\res_tweaked\winbrand.dll\1202.bmp, BITMAP, 1202,

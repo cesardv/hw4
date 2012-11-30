@@ -1,0 +1,13 @@
+[FILENAMES]
+Exe=      Backup\hhctrl.ocx
+SaveAs=   NewFiles\hhctrl.ocx
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\help-browser.ico,  ICONGROUP, "ICON!HTMLHELP",
+-addoverwrite Resources\res_named\devices\media-optical.ico,  ICONGROUP, "ICONCDROM",
+-addoverwrite Resources\res_named\devices\media-floppy.ico,  ICONGROUP, "ICONDISK350",
+-addoverwrite Resources\res_named\devices\drive-harddisk.ico,  ICONGROUP, "ICONFIXED",
+-addoverwrite Resources\res_named\places\folder-remote.ico,  ICONGROUP, "ICONREMOTE",
+
+-addoverwrite Resources\res_tweaked\wizards\help-browser_120x250.bmp,  BITMAP, 505,
+-addoverwrite Resources\res_tweaked\wizards\help-browser_61x182.bmp,  BITMAP, 2026,

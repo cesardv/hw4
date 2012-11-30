@@ -1,0 +1,25 @@
+[FILENAMES]
+Exe=      Backup\logonui.exe
+SaveAs=   NewFiles\logonui.exe
+
+[COMMANDS]
+;-addoverwrite Resources\res_tweaked\logonui.exe\100.bmp,  BITMAP, 100,
+-addoverwrite Resources\res_tweaked\logonui.exe\102.bmp,  BITMAP, 102,
+-addoverwrite Resources\res_tweaked\logonui.exe\103+104.bmp,  BITMAP, 103,
+-addoverwrite Resources\res_tweaked\logonui.exe\103+104.bmp,  BITMAP, 104,
+-addoverwrite Resources\res_tweaked\logonui.exe\105+106.bmp,  BITMAP, 105,
+-addoverwrite Resources\res_tweaked\logonui.exe\105+106.bmp,  BITMAP, 106,
+-addoverwrite Resources\res_tweaked\logonui.exe\107+121.bmp,  BITMAP, 107,
+-addoverwrite Resources\res_tweaked\logonui.exe\108+122.bmp,  BITMAP, 108,
+-addoverwrite Resources\res_tweaked\logonui.exe\112.bmp,  BITMAP, 112,
+-addoverwrite Resources\res_tweaked\logonui.exe\107+121.bmp,  BITMAP, 121,
+-addoverwrite Resources\res_tweaked\logonui.exe\108+122.bmp,  BITMAP, 122,
+-addoverwrite Resources\res_tweaked\logonui.exe\123+127.bmp,  BITMAP, 123,
+;-addoverwrite Resources\res_tweaked\logonui.exe\124.bmp,  BITMAP, 124,
+;-addoverwrite Resources\res_tweaked\logonui.exe\125.bmp,  BITMAP, 125,
+;-addoverwrite Resources\res_tweaked\logonui.exe\126.bmp,  BITMAP, 126,
+-addoverwrite Resources\res_tweaked\logonui.exe\123+127.bmp,  BITMAP, 127,
+-addoverwrite Resources\res_tweaked\logonui.exe\200.bmp,  BITMAP, 200,
+-addoverwrite Resources\res_tweaked\logonui.exe\201.bmp,  BITMAP, 201,
+
+-addoverwrite Resources\res_tweaked\logonui.exe\1000.uifile,  UIFILE, 1000,

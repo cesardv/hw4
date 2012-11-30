@@ -1,0 +1,29 @@
+[FILENAMES]
+Exe=	Backup\netshell.dll
+SaveAs=	NewFiles\netshell.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\tango-deprecated\devices-network-wired.ico, ICONGROUP, 0, 
+;-addoverwrite Resources\res_unofficial\vertigo\network-workgroup-magic.ico, ICONGROUP, 4, 
+-addoverwrite Resources\res_tweaked\netshell.dll\190.ico, ICONGROUP, 190, 
+-addoverwrite Resources\res_tweaked\netshell.dll\191.ico, ICONGROUP, 191, 
+-addoverwrite Resources\res_tweaked\netshell.dll\192.ico, ICONGROUP, 192, 
+-addoverwrite Resources\res_tweaked\netshell.dll\193.ico, ICONGROUP, 193, 
+-addoverwrite Resources\res_tweaked\netshell.dll\195.ico, ICONGROUP, 195, 
+-addoverwrite Resources\res_unofficial\vertigo\emblem-shared.ico, ICONGROUP, 300, 
+-addoverwrite Resources\res_tweaked\netshell.dll\301.ico, ICONGROUP, 301, 
+-addoverwrite Resources\res_named\categories\applications-internet.ico, ICONGROUP, 1115, 
+-addoverwrite Resources\res_named\apps\preferences-system-network-proxy.ico, ICONGROUP, 1116, 
+-addoverwrite Resources\res_named\devices\computer.ico, ICONGROUP, 1117, 
+-addoverwrite Resources\res_tweaked\netshell.dll\1902.ico, ICONGROUP, 1902, 
+-addoverwrite Resources\res_tweaked\netshell.dll\1903.ico, ICONGROUP, 1903, 
+-addoverwrite Resources\res_tweaked\netshell.dll\1906.ico, ICONGROUP, 1906, 
+-addoverwrite Resources\res_named\apps\preferences-system-network-proxy.ico, ICONGROUP, 1909, 
+-addoverwrite Resources\res_tweaked\netshell.dll\1915.ico, ICONGROUP, 1915, 
+-addoverwrite Resources\res_tweaked\netshell.dll\1916.ico, ICONGROUP, 1916, 
+-addoverwrite Resources\res_tweaked\netshell.dll\1917.ico, ICONGROUP, 1917, 
+-addoverwrite Resources\res_tweaked\netshell.dll\1918.ico, ICONGROUP, 1918, 
+-addoverwrite Resources\res_tweaked\netshell.dll\1920.ico, ICONGROUP, 1920, 
+
+-addoverwrite Resources\res_tweaked\wizards\network-wired_164x628.bmp,  BITMAP, 21201,
+-addoverwrite Resources\res_tweaked\wizards\network-wired_49x49.bmp,  BITMAP, 21202,

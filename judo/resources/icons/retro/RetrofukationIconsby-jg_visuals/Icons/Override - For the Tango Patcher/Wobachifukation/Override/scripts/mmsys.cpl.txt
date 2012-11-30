@@ -1,0 +1,15 @@
+[FILENAMES]
+Exe=      Backup\mmsys.cpl
+SaveAs=   NewFiles\mmsys.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\preferences-desktop-sound.ico,  ICONGROUP, 3004, 
+-addoverwrite Resources\res_named\mimetypes\audio-x-generic.ico,  ICONGROUP, 4354, 
+-addoverwrite Resources\res_named\devices\audio-card.ico,  ICONGROUP, 4368, 
+-addoverwrite Resources\res_named\devices\audio-input-microphone.ico,  ICONGROUP, 4369, 
+-addoverwrite Resources\res_named\devices\audio-input-microphone.ico,  ICONGROUP, 4378, 
+-addoverwrite Resources\res_named\status\audio-volume-high.ico,  ICONGROUP, 4379, 
+-addoverwrite Resources\res_named\devices\audio-input-microphone.ico,  ICONGROUP, 4380, 
+-addoverwrite Resources\res_named\status\audio-volume-muted.ico,  ICONGROUP, 4393, 
+
+

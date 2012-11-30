@@ -1,0 +1,16 @@
+[FILENAMES]
+Exe=      Backup\wscui.cpl
+SaveAs=   NewFiles\wscui.cpl
+
+[COMMANDS]
+
+-addoverwrite Resources\res_unofficial\vertigo\security-main.ico,  ICONGROUP, 200, 
+
+-addoverwrite Resources\res_tweaked\wscui.cpl\100.png, PNG, 100,
+-addoverwrite Resources\res_tweaked\wscui.cpl\103.png, PNG, 103,
+-addoverwrite Resources\res_tweaked\wscui.cpl\104.png, PNG, 104,
+-addoverwrite Resources\res_tweaked\wscui.cpl\106.png, PNG, 106,
+-addoverwrite Resources\res_tweaked\wscui.cpl\107.png, PNG, 107,
+-addoverwrite Resources\res_tweaked\wscui.cpl\108.png, PNG, 108,
+-addoverwrite Resources\res_tweaked\wscui.cpl\109.png, PNG, 109,
+-addoverwrite Resources\res_tweaked\wscui.cpl\110.png, PNG, 110,

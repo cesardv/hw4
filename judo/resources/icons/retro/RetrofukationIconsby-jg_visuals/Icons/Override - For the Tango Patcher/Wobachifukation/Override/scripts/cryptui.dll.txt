@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\cryptui.dll
+SaveAs=   NewFiles\cryptui.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\status\dialog-information.ico,  ICONGROUP, 3409, 
+-addoverwrite Resources\res_named\mimetypes\application-certificate.ico,  ICONGROUP, 3410, 

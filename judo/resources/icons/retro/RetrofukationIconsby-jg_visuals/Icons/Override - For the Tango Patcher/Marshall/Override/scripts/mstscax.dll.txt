@@ -1,0 +1,14 @@
+[FILENAMES]
+Exe=      Backup\mstscax.dll
+SaveAs=   NewFiles\mstscax.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\preferences-desktop-remote-desktop.ico,  ICONGROUP, 100,
+-addoverwrite Resources\res_named\apps\preferences-desktop-remote-desktop.ico,  ICONGROUP, 13400,
+
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 13403,
+-addoverwrite Resources\res_named\status\dialog-error.ico,  ICONGROUP, 13404,
+-addoverwrite Resources\res_named\mimetypes\application-certificate.ico,  ICONGROUP, 13405,
+-addoverwrite Resources\res_named\apps\preferences-desktop-remote-desktop.ico,  ICONGROUP, 13406,
+-addoverwrite Resources\res_named\devices\drive-harddisk.ico,  ICONGROUP, 13407,
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 13409,

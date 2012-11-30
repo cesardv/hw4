@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\rasdlg.dll
+SaveAs=   NewFiles\rasdlg.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\rasdlg.dll\1678.bmp,  BITMAP, 1678,
+;-addoverwrite Resources\res_tweaked\wizards\telephone_114x309.bmp,  BITMAP, 116,

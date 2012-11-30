@@ -1,0 +1,13 @@
+[FILENAMES]
+Exe=	Backup\upnpui.dll
+SaveAs=	NewFiles\upnpui.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\preferences-system-network-proxy.ico, ICONGROUP, 300,
+-addoverwrite Resources\res_named\apps\preferences-system-network-proxy.ico, ICONGROUP, 301,
+-addoverwrite Resources\res_named\devices\camera-video.ico, ICONGROUP, 302,
+-addoverwrite Resources\res_named\devices\camera-photo.ico, ICONGROUP, 303, 
+-addoverwrite Resources\res_named\apps\preferences-system-network-proxy.ico, ICONGROUP, 305,
+-addoverwrite Resources\res_named\devices\printer.ico, ICONGROUP, 306, 
+-addoverwrite Resources\res_unofficial\git2\scanner.ico, ICONGROUP, 307, 
+-addoverwrite Resources\res_named\devices\multimedia-player.ico, ICONGROUP, 308, 

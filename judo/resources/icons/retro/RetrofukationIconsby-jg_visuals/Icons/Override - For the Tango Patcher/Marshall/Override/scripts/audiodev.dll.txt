@@ -1,0 +1,9 @@
+[FILENAMES]
+Exe=      Backup\audiodev.dll
+SaveAs=   NewFiles\audiodev.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\multimedia-player.ico,  ICONGROUP, 50, 
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 303,
+-addoverwrite Resources\res_named\status\dialog-error.ico,  ICONGROUP, 304,
+-addoverwrite Resources\res_named\status\dialog-information.ico,  ICONGROUP, 307,

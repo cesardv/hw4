@@ -1,0 +1,10 @@
+[FILENAMES]
+Exe=      Backup\shdoclc.dll
+SaveAs=   NewFiles\shdoclc.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\vertigo\internet-web-browser-msie.ico, ICONGROUP, 190,
+-addoverwrite Resources\res_named\emblems\emblem-favorite.ico,  ICONGROUP, 191,
+
+-addoverwrite Resources\res_tweaked\wizards\emblem-favorite_164x314.bmp,  BITMAP, 17034,
+-addoverwrite Resources\res_tweaked\wizards\emblem-favorite_49x49.bmp,  BITMAP, 17035,

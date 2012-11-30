@@ -1,0 +1,13 @@
+[FILENAMES]
+Exe=      Backup\shdocvw.dll
+SaveAs=   NewFiles\shdocvw.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\mimetypes\text-html.ico,  ICONGROUP, 110,
+-addoverwrite Resources\res_named\devices\printer.ico,  ICONGROUP, 116,
+-addoverwrite Resources\res_unofficial\tango-deprecated\actions-document-history.ico,  ICONGROUP, 20780,
+-addoverwrite Resources\res_unofficial\tango-deprecated\actions-document-history.ico,  ICONGROUP, 20784,
+-addoverwrite Resources\res_unofficial\tango-deprecated\actions-document-history.ico,  ICONGROUP, 20785,
+-addoverwrite Resources\res_named\mimetypes\text-html.ico,  ICONGROUP, 20786,
+
+-addoverwrite Resources\res_tweaked\anim\net_folder.avi,  AVI, 256, 

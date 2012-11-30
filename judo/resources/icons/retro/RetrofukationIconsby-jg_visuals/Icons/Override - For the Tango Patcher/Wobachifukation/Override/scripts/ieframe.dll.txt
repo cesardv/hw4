@@ -1,0 +1,30 @@
+[FILENAMES]
+Exe=	"Backup\ieframe.dll"
+SaveAs=	"NewFiles\ieframe.dll"
+
+[COMMANDS]
+-addoverwrite Resources\res_named\actions\go-home.ico,  ICONGROUP, 100, 
+-addoverwrite Resources\res_named\mimetypes\text-html.ico, ICONGROUP, 110,  
+-addoverwrite Resources\res_named\actions\system-search.ico,  ICONGROUP, 111,
+-addoverwrite Resources\res_named\devices\printer.ico,  ICONGROUP, 116,
+-addoverwrite Resources\res_unofficial\vertigo\internet-web-browser-msie.ico, ICONGROUP, 190,
+-addoverwrite Resources\res_unofficial\tango-deprecated\actions-document-history.ico,  ICONGROUP, 20780, 
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 20782,
+-addoverwrite Resources\res_unofficial\tango-deprecated\actions-document-history.ico,  ICONGROUP, 20784, 
+-addoverwrite Resources\res_unofficial\tango-deprecated\actions-document-history.ico,  ICONGROUP, 20785, 
+-addoverwrite Resources\res_named\mimetypes\text-html.ico, ICONGROUP, 20786,  
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 20794,
+-addoverwrite Resources\res_unofficial\vertigo\security-warning.ico,  ICONGROUP, 31057, 
+-addoverwrite Resources\res_unofficial\vertigo\security-error.ico,  ICONGROUP, 31058, 
+-addoverwrite Resources\res_named\emblems\emblem-favorite.ico,  ICONGROUP, 31060, 
+-addoverwrite Resources\res_unofficial\sgarrity\rss.ico,  ICONGROUP, 31064, 
+-addoverwrite Resources\res_unofficial\vertigo\security-question.ico,  ICONGROUP, 36870, 
+-addoverwrite Resources\res_unofficial\vertigo\security-error.ico,  ICONGROUP, 36871, 
+-addoverwrite Resources\res_unofficial\vertigo\security-main.ico,  ICONGROUP, 36884, 
+-addoverwrite Resources\res_unofficial\vertigo\security-ok.ico,  ICONGROUP, 36885, 
+-addoverwrite Resources\res_named\status\dialog-warning.ico,  ICONGROUP, 38913,
+
+-addoverwrite Resources\res_tweaked\ieframe.dll\697.bmp,  BITMAP, 697, 
+-addoverwrite Resources\res_tweaked\ieframe.dll\699.bmp,  BITMAP, 699, 
+
+-addoverwrite Resources\res_tweaked\anim\net_folder.avi,  AVI, 544, 

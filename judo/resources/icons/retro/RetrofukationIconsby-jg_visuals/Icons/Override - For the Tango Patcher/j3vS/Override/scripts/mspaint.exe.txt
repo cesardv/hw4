@@ -1,0 +1,10 @@
+[FILENAMES]
+Exe=      Backup\mspaint.exe
+SaveAs=   NewFiles\mspaint.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\categories\applications-graphics.ico,  ICONGROUP, 2,
+-addoverwrite Resources\res_named\mimetypes\image-x-generic.ico,  ICONGROUP, 3,
+
+-addoverwrite Resources\res_tweaked\mspaint.exe\102.bmp,  BITMAP, 102,
+-addoverwrite Resources\res_tweaked\mspaint.exe\859.bmp,  BITMAP, 859,

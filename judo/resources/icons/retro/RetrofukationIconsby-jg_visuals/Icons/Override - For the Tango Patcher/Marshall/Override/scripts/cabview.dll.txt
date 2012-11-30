@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\cabview.dll
+SaveAs=   NewFiles\cabview.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\mimetypes\package-x-generic.ico,  ICONGROUP, 1, 
+-addoverwrite Resources\res_unofficial\vertigo\file-generic.ico,  ICONGROUP, 105, 

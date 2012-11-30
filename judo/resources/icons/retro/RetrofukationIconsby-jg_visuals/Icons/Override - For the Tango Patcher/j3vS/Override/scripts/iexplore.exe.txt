@@ -1,0 +1,11 @@
+[FILENAMES]
+Exe=	"Backup\iexplore.exe"
+SaveAs=	"NewFiles\iexplore.exe"
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\vertigo\internet-web-browser-msie.ico, ICONGROUP, 7,
+-addoverwrite Resources\res_named\mimetypes\text-html.ico, ICONGROUP, 17,  
+-addoverwrite Resources\res_unofficial\vertigo\internet-web-browser-msie.ico, ICONGROUP, 32528,
+-addoverwrite Resources\res_named\actions\go-home.ico,  ICONGROUP, 32536,  
+-addoverwrite Resources\res_named\mimetypes\text-html.ico, ICONGROUP, 32529,  
+-addoverwrite Resources\res_named\mimetypes\text-html.ico, ICONGROUP, 32547,  

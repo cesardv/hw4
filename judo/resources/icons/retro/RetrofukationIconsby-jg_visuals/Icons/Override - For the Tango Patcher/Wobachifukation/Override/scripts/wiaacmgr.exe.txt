@@ -1,0 +1,18 @@
+[FILENAMES]
+Exe=      Backup\wiaacmgr.exe
+SaveAs=   NewFiles\wiaacmgr.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\camera-photo.ico, ICONGROUP, 2, 
+;^we'll need to make sure that still make sense six months from now
+-addoverwrite Resources\res_unofficial\git2\scanner.ico, ICONGROUP, 102, 
+-addoverwrite Resources\res_named\devices\camera-video.ico, ICONGROUP, 206,
+-addoverwrite Resources\res_named\devices\camera-photo.ico, ICONGROUP, 605, 
+-addoverwrite Resources\res_named\mimetypes\image-x-generic.ico, ICONGROUP, 607, 
+
+-addoverwrite Resources\res_tweaked\wizards\camera-photo_49x49.bmp,  BITMAP, 207,
+-addoverwrite Resources\res_tweaked\wizards\camera-photo_164x628.bmp,  BITMAP, 400,
+-addoverwrite Resources\res_tweaked\wizards\camera-photo_49x49.bmp,  BITMAP, 602,
+-addoverwrite Resources\res_tweaked\wizards\input-scanner_164x628.bmp,  BITMAP, 603,
+-addoverwrite Resources\res_tweaked\wizards\input-scanner_49x49.bmp,  BITMAP, 604,
+-addoverwrite Resources\res_tweaked\wizards\camera-video_164x628.bmp,  BITMAP, 605,

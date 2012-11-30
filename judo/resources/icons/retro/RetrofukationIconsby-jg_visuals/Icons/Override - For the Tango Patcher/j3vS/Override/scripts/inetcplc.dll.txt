@@ -1,0 +1,9 @@
+[FILENAMES]
+Exe=      Backup\inetcplc.dll
+SaveAs=   NewFiles\inetcplc.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\actions\go-home.ico,  ICONGROUP, 1301, 
+-addoverwrite Resources\res_unofficial\tango-deprecated\actions-document-history.ico,  ICONGROUP, 1303, 
+-addoverwrite Resources\res_named\mimetypes\application-certificate.ico,  ICONGROUP, 1310, 
+-addoverwrite Resources\res_unofficial\vertigo\system-appchooser.ico,  ICONGROUP, 4490, 

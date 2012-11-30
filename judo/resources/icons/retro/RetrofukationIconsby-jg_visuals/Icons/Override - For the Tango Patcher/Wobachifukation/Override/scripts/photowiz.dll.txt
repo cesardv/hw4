@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\photowiz.dll
+SaveAs=   NewFiles\photowiz.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\wizards\emblem-photos_164x628.bmp,  BITMAP, 1500,
+-addoverwrite Resources\res_tweaked\wizards\emblem-photos_49x49.bmp,  BITMAP, 1501,

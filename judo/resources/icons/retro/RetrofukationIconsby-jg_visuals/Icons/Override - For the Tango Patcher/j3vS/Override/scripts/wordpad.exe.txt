@@ -1,0 +1,13 @@
+[FILENAMES]
+Exe=      Backup\wordpad.exe
+SaveAs=   NewFiles\wordpad.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\mimetypes\x-office-document.ico,  ICONGROUP, 128,
+-addoverwrite Resources\res_named\mimetypes\x-office-document.ico,  ICONGROUP, 154,
+-addoverwrite Resources\res_named\mimetypes\x-office-document.ico,  ICONGROUP, 155,
+-addoverwrite Resources\res_named\mimetypes\text-x-generic.ico,  ICONGROUP, 165,
+
+-addoverwrite Resources\res_tweaked\wordpad.exe\4.bmp,  BITMAP, 4,
+-addoverwrite Resources\res_tweaked\wordpad.exe\139.bmp,  BITMAP, 139,
+-addoverwrite Resources\res_tweaked\wordpad.exe\140.bmp,  BITMAP, 140,

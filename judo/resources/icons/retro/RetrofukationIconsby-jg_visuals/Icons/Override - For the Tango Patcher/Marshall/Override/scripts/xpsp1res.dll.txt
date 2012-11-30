@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\xpsp1res.dll
+SaveAs=   NewFiles\xpsp1res.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\vertigo\system-appchooser.ico,  ICONGROUP, 100,

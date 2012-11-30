@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\hh.exe
+SaveAs=   NewFiles\hh.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\help-browser.ico,  ICONGROUP, 101,

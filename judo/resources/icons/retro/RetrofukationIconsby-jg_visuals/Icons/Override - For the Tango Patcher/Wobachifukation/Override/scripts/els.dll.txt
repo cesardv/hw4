@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\els.dll
+SaveAs=   NewFiles\els.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\tangerine-icon-theme\apps\logviewer.ico,  ICONGROUP, 100,
+-addoverwrite Resources\res_unofficial\tangerine-icon-theme\apps\logviewer.ico,  ICONGROUP, 308,

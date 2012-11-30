@@ -1,0 +1,8 @@
+[FILENAMES]
+Exe=      Backup\fsquirt.exe
+SaveAs=   NewFiles\fsquirt.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\yast2-industrial\yast-bluetooth.ico,  ICONGROUP, 107, 
+-addoverwrite Resources\res_tweaked\wizards\network_bluetooth_164x628.bmp,  BITMAP, 129,
+-addoverwrite Resources\res_tweaked\wizards\network_bluetooth_49x49.bmp,  BITMAP, 130,

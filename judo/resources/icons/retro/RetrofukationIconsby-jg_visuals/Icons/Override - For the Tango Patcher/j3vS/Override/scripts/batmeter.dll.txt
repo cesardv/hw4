@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=	Backup\batmeter.dll
+SaveAs=	NewFiles\batmeter.dll
+
+[COMMANDS]
+
+-addoverwrite "Resources\res_tweaked\batmeter.dll\301.bmp", BITMAP, 301, 

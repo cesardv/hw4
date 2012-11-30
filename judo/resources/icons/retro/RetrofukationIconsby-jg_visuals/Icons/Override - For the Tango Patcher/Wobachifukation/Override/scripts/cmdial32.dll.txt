@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe=      Backup\cmdial32.dll
+SaveAs=   NewFiles\cmdial32.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_tweaked\cmdial32.dll\113.bmp,  BITMAP, 113,
+-addoverwrite Resources\res_tweaked\wizards\telephone_114x309.bmp,  BITMAP, 116,

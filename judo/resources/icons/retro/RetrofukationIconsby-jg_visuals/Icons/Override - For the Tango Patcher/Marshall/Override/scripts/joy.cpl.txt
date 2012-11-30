@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\joy.cpl
+SaveAs=   NewFiles\joy.cpl
+
+[COMMANDS]
+-addoverwrite Resources\res_named\devices\input-gaming.ico,  ICONGROUP,102,

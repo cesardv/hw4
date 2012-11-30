@@ -1,0 +1,6 @@
+[FILENAMES]
+Exe=      Backup\wuaueng1.dll
+SaveAs=   NewFiles\wuaueng1.dll
+
+[COMMANDS]
+-addoverwrite Resources\res_named\apps\system-software-update.ico,  ICONGROUP, 500, 

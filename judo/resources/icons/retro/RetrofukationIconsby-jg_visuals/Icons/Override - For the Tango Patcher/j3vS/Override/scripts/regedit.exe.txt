@@ -1,0 +1,9 @@
+[FILENAMES]
+Exe=      Backup\regedit.exe
+SaveAs=   NewFiles\regedit.exe
+
+[COMMANDS]
+-addoverwrite Resources\res_unofficial\vertigo\regedit.ico,  ICONGROUP, 100,
+-addoverwrite Resources\res_unofficial\vertigo\regedit.ico,  ICONGROUP, 101,
+-addoverwrite Resources\res_named\actions\system-search.ico,  ICONGROUP, 102,
+
